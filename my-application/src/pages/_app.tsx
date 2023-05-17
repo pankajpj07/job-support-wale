@@ -1,7 +1,7 @@
 import 'tailwindcss/tailwind.css'
 import Head from 'next/head'
 import { AppProps } from 'next/app'
-import { logoPath } from '../constants/constants'
+import { favicon } from '../constants/constants'
 import { Analytics } from '@vercel/analytics/react'
 
 function App({ Component, pageProps }: AppProps) {
@@ -32,7 +32,7 @@ function App({ Component, pageProps }: AppProps) {
           href="/manifest.json"
           crossOrigin="use-credentials"
         />
-        <link href={logoPath} rel="icon" type="image/png" sizes="16x16" />
+        <link href={favicon} rel="icon" type="image/png" sizes="16x16" />
         <link rel="apple-touch-icon" href="/apple-icon.png"></link>
         <meta name="theme-color" content="#317EFB" />
       </Head>

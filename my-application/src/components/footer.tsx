@@ -5,16 +5,13 @@ import { logoPath } from '@/constants/constants'
 
 const Footer = () => {
   return (
-    <footer className="bg-black text-white p-10">
+    <footer className="bg-black text-white py-24 px-10">
       <div className="container mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {/* Column 1 */}
           <div>
             <div className="flex items-center mb-4">
-              <div className="w-8 h-8">
-                <Image src={logoPath} alt="Logo" width={32} height={32} />
-              </div>
-              <span className="ml-2">Your Logo</span>
+              <Image src={logoPath} alt="Logo" width={200} height={40} />
             </div>
             <div className="flex space-x-4">
               <a
