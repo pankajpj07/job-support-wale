@@ -13,7 +13,7 @@ const HeroBanner = () => {
         quality={100}
         className="object-cover opacity-80"
       />
-      <div className="bg-black bg-opacity-70 md:bg-opacity-60 absolute inset-0"></div>{' '}
+      <div className="bg-black bg-opacity-70 absolute inset-0"></div>{' '}
       {/* Dark overlay */}
       <div className="absolute inset-0 flex flex-col justify-center items-center text-white p-5 md:p-0">
         <h1 className="text-4xl font-bold mb-10">

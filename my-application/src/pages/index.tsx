@@ -1,11 +1,12 @@
 import React from 'react'
-import Download from '../components/download'
 import Header from '../components/header'
-import HowToDownload from '../components/howtodownload'
-import Specs from '../components/specs'
 import Footer from '../components/footer'
 import Head from 'next/head'
 import HeroBanner from '@/components/hero'
+import MissionSection from '@/components/mission_section'
+import ServicesSection from '@/components/services_section'
+import WhatsAppSticky from '@/components/whatsapp_sticky'
+import GetInTouch from '@/components/get_in_touch'
 
 export default function Home() {
   return (
@@ -20,6 +21,10 @@ export default function Home() {
       <div>
         <Header />
         <HeroBanner />
+        <MissionSection />
+        <ServicesSection />
+        <GetInTouch />
+        <WhatsAppSticky />
         <Footer />
       </div>
     </>

@@ -2,7 +2,12 @@ import { useState } from 'react'
 import { logoPath } from '@/constants/constants'
 import Link from 'next/link'
 import Image from 'next/image'
+import { NavLink, NavLinkMobile } from './NavLinks'
 
+type NavLinkProps = {
+  href: string
+  text: string
+}
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
 
@@ -11,7 +16,7 @@ const Header = () => {
   }
 
   return (
-    <header className="bg-white py-6 px-6 shadow sticky top-0 w-full z-1">
+    <header className="bg-white py-6 px-6 md:px-20 shadow sticky top-0 w-full z-1">
       <div className="flex items-center justify-between">
         <div>
           <Link href="/">
@@ -22,20 +27,10 @@ const Header = () => {
         </div>
         <div className="hidden md:block">
           <div className={`flex items-center space-x-6  md:block`}>
-            <Link href="/">
-              <span className="text-black hover:text-gray-500">Home</span>
-            </Link>
-            <Link href="/job-support">
-              <span className="text-black hover:text-gray-500">
-                Job Support
-              </span>
-            </Link>
-            <Link href="/join-us">
-              <span className="text-black hover:text-gray-500">Join Us</span>
-            </Link>
-            <Link href="/contact-us">
-              <span className="text-black hover:text-gray-500">Contact Us</span>
-            </Link>
+            <NavLink href="/" text="Home" />
+            <NavLink href="/job-support" text="Job Support" />
+            <NavLink href="/join-us" text="Join Us" />
+            <NavLink href="#contact-us" text="Contact Us" />
             <Link href="/book-demo">
               <span className="px-4 py-2 text-white bg-black rounded-md hover:bg-gray-800">
                 Book a Demo
@@ -85,26 +80,10 @@ const Header = () => {
       </div>
       {/* Collapsible Menu */}
       <div className={`mt-4 sm:hidden ${isMenuOpen ? 'block' : 'hidden'}`}>
-        <Link href="/">
-          <span className="block py-2 text-black hover:text-gray-500">
-            Home
-          </span>
-        </Link>
-        <Link href="/job-support">
-          <span className="block py-2 text-black hover:text-gray-500">
-            Job Support
-          </span>
-        </Link>
-        <Link href="/join-us">
-          <span className="block py-2 text-black hover:text-gray-500">
-            Join Us
-          </span>
-        </Link>
-        <Link href="/contact-us">
-          <span className="block py-2 text-black hover:text-gray-500">
-            Contact Us
-          </span>
-        </Link>
+        <NavLinkMobile href="/" text="Home" />
+        <NavLinkMobile href="/job-support" text="Job Support" />
+        <NavLinkMobile href="/join-us" text="Join Us" />
+        <NavLinkMobile href="#contact-us" text="Contact Us" />
         <Link href="/book-demo">
           <span className="block py-2 px-4 mt-2 text-white bg-black rounded-md hover:bg-gray-800">
             Book a Demo
