@@ -1,11 +1,11 @@
 import Image from 'next/image'
 import Link from 'next/link'
-import { Phone, Email } from '@mui/icons-material'
+import { Phone, Email, Facebook, Twitter, Instagram } from '@mui/icons-material'
 import { logoPath } from '@/constants/constants'
 
 const Footer = () => {
   return (
-    <footer className="bg-black text-white py-6">
+    <footer className="bg-black text-white p-10">
       <div className="container mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {/* Column 1 */}
@@ -22,21 +22,21 @@ const Footer = () => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <span className="text-white">Facebook</span>
+                <Facebook className="text-white" />
               </a>
               <a
                 href="https://twitter.com/"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <span className="text-white">Twitter</span>
+                <Twitter className="text-white" />
               </a>
               <a
                 href="https://www.instagram.com/"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <span className="text-white">Instagram</span>
+                <Instagram className="text-white" />
               </a>
             </div>
           </div>
