@@ -7,11 +7,11 @@ const Footer = () => {
   return (
     <footer className="bg-black text-white py-24 px-10">
       <div className="container mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
           {/* Column 1 */}
           <div>
             <div className="flex items-center mb-4">
-              <Image src={logoPath} alt="Logo" width={200} height={40} />
+              <Image src={logoPath} alt="Logo" height={100} width={250} />
             </div>
             <div className="flex space-x-4">
               <a

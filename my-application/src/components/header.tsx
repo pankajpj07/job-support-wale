@@ -16,7 +16,7 @@ const Header = () => {
         <div>
           <Link href="/">
             <span>
-              <Image src={logoPath} alt="Logo" height={40} width={100} />
+              <Image src={logoPath} alt="Logo" height={100} width={250} />
             </span>
           </Link>
         </div>
