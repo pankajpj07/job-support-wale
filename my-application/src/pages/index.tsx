@@ -5,6 +5,7 @@ import HowToDownload from '../components/howtodownload'
 import Specs from '../components/specs'
 import Footer from '../components/footer'
 import Head from 'next/head'
+import HeroBanner from '@/components/hero'
 
 export default function Home() {
   return (
@@ -12,15 +13,13 @@ export default function Home() {
       <Head>
         <link
           rel="canonical"
-          href="https://www.utubeloader.com"
+          href="https://www.indiajobsupport.com"
           key="canonical"
         />
       </Head>
       <div>
         <Header />
-        <Download />
-        <HowToDownload />
-        <Specs />
+        <HeroBanner />
         <Footer />
       </div>
     </>

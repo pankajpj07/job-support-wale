@@ -10,7 +10,7 @@ export default function FAQ() {
         <title>FAQ - {companyName}</title>
         <link
           rel="canonical"
-          href="https://www.utubeloader.com/faq"
+          href="https://www.indiajobsupport.com/faq"
           key="canonical"
         />
         <meta

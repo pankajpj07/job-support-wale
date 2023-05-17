@@ -1,15 +1,14 @@
 type ButtonProps = {
   title: string
-  onClickFn: Function
+  href: string
 }
 
-export default function Button({ title, onClickFn }: ButtonProps) {
+export default function Button({ title, href }: ButtonProps) {
   return (
-    <button
-      className="p-3 m-1.5 flex w-56 justify-center bg-blue-900 text-white hover:bg-blue-600"
-      onClick={() => onClickFn()}
-    >
-      {title}
-    </button>
+    <a href={href}>
+      <button className="p-3 m-1.5 flex md:w-56 justify-center bg-indigo-700 text-white hover:bg-indigo-600 rounded-full">
+        {title}
+      </button>
+    </a>
   )
 }

@@ -1,11 +1,11 @@
 {
-    "name": "UTubeLoader",
-    "short_name": "UTubeLoader",
+    "name": "IndiaJobSupport",
+    "short_name": "IndiaJobSupport",
     "icons": [
         {
-            "src": "/logo.svg",
+            "src": "/logo.png",
             "sizes": "512x512",
-            "type": "image/svg+xml"
+            "type": "image/png"
           }
     ],
     "background_color": "#ffffff",

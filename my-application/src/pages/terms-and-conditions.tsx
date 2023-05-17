@@ -10,7 +10,7 @@ export default function TermsAndConditions() {
         <title>{companyName} - Terms and Conditions</title>
         <link
           rel="canonical"
-          href="https://www.utubeloader.com/terms-and-conditions"
+          href="https://www.indiajobsupport.com/terms-and-conditions"
           key="canonical"
         />
         <meta

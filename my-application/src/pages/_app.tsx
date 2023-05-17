@@ -26,7 +26,7 @@ function App({ Component, pageProps }: AppProps) {
           name="keywords"
           content="Youtube downloader, online video downloader, save Youtube videos, download Youtube videos, Youtube video downloader"
         />
-        <title>UTubeLoader - Save Youtube Videos and Audios Easily</title>
+        <title>IndiaJobSupport - Save Youtube Videos and Audios Easily</title>
         <link
           rel="manifest"
           href="/manifest.json"

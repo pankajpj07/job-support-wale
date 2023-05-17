@@ -9,7 +9,7 @@ export default function About() {
         <title>About Us - Your Trusted YouTube Video Downloader"</title>
         <link
           rel="canonical"
-          href="https://www.utubeloader.com/about"
+          href="https://www.indiajobsupport.com/about"
           key="canonical"
         />
         <meta

@@ -11,7 +11,7 @@ export default function PrivacyPolicy() {
         <title>Privacy Policy | {companyName}</title>
         <link
           rel="canonical"
-          href="https://www.utubeloader.com/privacy-policy"
+          href="https://www.indiajobsupport.com/privacy-policy"
           key="canonical"
         />
         <meta

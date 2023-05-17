@@ -7,15 +7,15 @@ export default function ContactUs() {
   return (
     <>
       <Head>
-        <title>Contact Us - Utubeloader</title>
+        <title>Contact Us - indiajobsupport</title>
         <link
           rel="canonical"
-          href="https://www.utubeloader.com/contact"
+          href="https://www.indiajobsupport.com/contact"
           key="canonical"
         />
         <meta
           name="description"
-          content="Contact Utubeloader support for assistance."
+          content="Contact indiajobsupport support for assistance."
         />
       </Head>
       <Header />
@@ -27,9 +27,9 @@ export default function ContactUs() {
               The only way to reach us is through email:{' '}
               <a
                 className="text-blue-600"
-                href="mailto:support@utubeloader.com"
+                href="mailto:support@indiajobsupport.com"
               >
-                support@utubeloader.com
+                support@indiajobsupport.com
               </a>
             </p>
             <p className="text-lg mb-6">
