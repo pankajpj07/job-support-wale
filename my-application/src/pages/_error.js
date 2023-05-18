@@ -32,9 +32,4 @@ export function ErrorPage({ statusCode }) {
   )
 }
 
-ErrorPage.getInitialProps = ({ res, err }) => {
-  const statusCode = res ? res.statusCode : err ? err.statusCode : 500
-  return { statusCode }
-}
-
 export default ErrorPage

@@ -4,14 +4,13 @@ import { FormData } from '@/types/types'
 import React, { FormEvent, useState } from 'react'
 
 const JoinOurTeam = () => {
-  const [formData, setFormData] =
-    useState<FormData>(emptyContactFormData)
+  const [formData, setFormData] = useState<FormData>(emptyContactFormData)
 
   const handleSubmit = (e: FormEvent) => {
     e.preventDefault()
     // Handle form submission logic here
     // You can access the form field values using the formData state object
-    writeToSheet(formData,'contact')
+    writeToSheet(formData, 'contact')
     console.log(formData)
   }
 

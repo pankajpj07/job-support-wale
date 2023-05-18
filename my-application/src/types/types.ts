@@ -27,7 +27,7 @@ export interface ModalProps {
   toggleModal: Function
 }
 
-export enum formType{
-  CONTACT='contact',
-  DEMO='demo'
+export enum formType {
+  CONTACT = 'contact',
+  DEMO = 'demo',
 }

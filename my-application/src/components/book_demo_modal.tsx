@@ -9,7 +9,7 @@ const BookDemoModal = ({ isOpen, toggleModal }: ModalProps) => {
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault()
     // Perform form submission logic here
-    writeToSheet(formData,'demo')
+    writeToSheet(formData, 'demo')
     // Reset form fields
     setFormData(emptyDemoFormData)
     // Close the modal
@@ -95,7 +95,7 @@ const BookDemoModal = ({ isOpen, toggleModal }: ModalProps) => {
                   <option value="backend">Backend</option>
                   <option value="fullstack">Full Stack</option>
                   <option value="devops">DevOps</option>
-                  <option value="operations">Operations</option>
+                  <option value="dotnet">Dotnet</option>
                   <option value="other">Other</option>
                 </select>
               </div>

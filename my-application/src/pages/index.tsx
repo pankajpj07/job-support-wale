@@ -19,7 +19,7 @@ export default function Home() {
         />
       </Head>
       <div>
-        <Header />
+        <Header isJoinOurTeam />
         <HeroBanner />
         <MissionSection />
         <ServicesSection />

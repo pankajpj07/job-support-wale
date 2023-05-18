@@ -5,7 +5,7 @@ import Image from 'next/image'
 import { NavLink, NavLinkMobile } from './NavLinks'
 import BookDemoModal from './book_demo_modal'
 
-const Header = () => {
+const Header = ({ isJoinOurTeam = false }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [isModalOpen, setIsModalOpen] = useState(false)
 
@@ -31,7 +31,9 @@ const Header = () => {
           <div className={`flex items-center space-x-6  md:block`}>
             <NavLink href="/" text="Home" />
             <NavLink href="/job-support" text="Job Support" />
-            <NavLink href="#join-our-team" text="Join Our Team" />
+            {isJoinOurTeam && (
+              <NavLink href="#join-our-team" text="Join Our Team" />
+            )}
             <button onClick={toggleModal}>
               <span className="px-4 py-2 text-white bg-black rounded-md hover:bg-gray-800">
                 Book a Demo
@@ -83,7 +85,9 @@ const Header = () => {
       <div className={`mt-4 sm:hidden ${isMenuOpen ? 'block' : 'hidden'}`}>
         <NavLinkMobile href="/" text="Home" />
         <NavLinkMobile href="/job-support" text="Job Support" />
-        <NavLinkMobile href="#join-our-team" text="Join Our Team" />
+        {isJoinOurTeam && (
+          <NavLinkMobile href="#join-our-team" text="Join Our Team" />
+        )}
         <button onClick={toggleModal}>
           <span className="block py-2 px-4 mt-2 text-white bg-black rounded-md hover:bg-gray-800">
             Book a Demo
