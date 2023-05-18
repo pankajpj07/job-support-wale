@@ -1,16 +1,17 @@
-import { emptyFormData } from '@/constants/constants'
+import { emptyDemoFormData } from '@/constants/constants'
+import writeToSheet from '@/lib/googleSheetsAPI'
 import { FormData, ModalProps } from '@/types/types'
 import { useState, ChangeEvent, FormEvent } from 'react'
 
 const BookDemoModal = ({ isOpen, toggleModal }: ModalProps) => {
-  const [formData, setFormData] = useState<FormData>(emptyFormData)
+  const [formData, setFormData] = useState<FormData>(emptyDemoFormData)
 
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault()
     // Perform form submission logic here
-    console.log(formData)
+    writeToSheet(formData,'demo')
     // Reset form fields
-    setFormData(emptyFormData)
+    setFormData(emptyDemoFormData)
     // Close the modal
     toggleModal()
   }
@@ -34,33 +35,30 @@ const BookDemoModal = ({ isOpen, toggleModal }: ModalProps) => {
             <h2 className="text-2xl font-bold mb-4">Book a Demo with Us</h2>
             <form onSubmit={handleSubmit}>
               <div className="mb-4">
-                <label className="block mb-2 font-bold" htmlFor="fullName">
+                <label className="block mb-2 font-bold" htmlFor="name">
                   Full Name
                 </label>
                 <input
                   className="w-full px-3 py-2 border border-gray-300 rounded"
                   type="text"
-                  id="fullName"
-                  name="fullName"
-                  value={formData.fullName}
+                  id="name"
+                  name="name"
+                  value={formData.name}
                   onChange={handleInputChange}
                   required
                 />
               </div>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
                 <div>
-                  <label
-                    className="block mb-2 font-bold"
-                    htmlFor="mobileNumber"
-                  >
+                  <label className="block mb-2 font-bold" htmlFor="phone">
                     Mobile Number
                   </label>
                   <input
                     className="w-full px-3 py-2 border border-gray-300 rounded"
                     type="tel"
-                    id="mobileNumber"
-                    name="mobileNumber"
-                    value={formData.mobileNumber}
+                    id="phone"
+                    name="phone"
+                    value={formData.phone}
                     onChange={handleInputChange}
                     required
                   />

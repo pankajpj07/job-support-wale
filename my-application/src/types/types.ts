@@ -12,16 +12,22 @@ export interface ButtonProps {
 }
 
 export interface FormData {
-  fullName: string
-  mobileNumber: string
+  name: string
   email: string
-  technology: string
-  otherTechnology: string
+  phone: string
   country: string
-  preferredDate: string
+  technology?: string
+  otherTechnology?: string
+  preferredDate?: string
+  query?: string
 }
 
 export interface ModalProps {
   isOpen: boolean
   toggleModal: Function
+}
+
+export enum formType{
+  CONTACT='contact',
+  DEMO='demo'
 }

@@ -27,12 +27,20 @@ export const supportServices = [
   'We provide the job support in the USA, the UK, Canada, Australia, UAE, and all other countries.',
   "Usually we don't work for weekends. But however if you have a deadline to finish your task No worries. We are here for you support you on weekends too.",
 ]
-export const emptyFormData={
-  fullName: '',
-  mobileNumber: '',
+export const emptyDemoFormData = {
+  name: '',
+  phone: '',
   email: '',
   technology: '',
   otherTechnology: '',
   country: '',
   preferredDate: '',
+}
+
+export const emptyContactFormData = {
+  name: '',
+  email: '',
+  country: '',
+  phone: '',
+  query: '',
 }

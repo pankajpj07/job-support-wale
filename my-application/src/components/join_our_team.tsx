@@ -1,49 +1,119 @@
-import Head from 'next/head'
-import Link from 'next/link'
-import Header from './header'
-import Footer from './footer'
+import { emptyContactFormData } from '@/constants/constants'
+import writeToSheet from '@/lib/googleSheetsAPI'
+import { FormData } from '@/types/types'
+import React, { FormEvent, useState } from 'react'
 
-export default function JoinOurTeam() {
+const JoinOurTeam = () => {
+  const [formData, setFormData] =
+    useState<FormData>(emptyContactFormData)
+
+  const handleSubmit = (e: FormEvent) => {
+    e.preventDefault()
+    // Handle form submission logic here
+    // You can access the form field values using the formData state object
+    writeToSheet(formData,'contact')
+    console.log(formData)
+  }
+
+  const handleInputChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
+    const { name, value } = e.target
+    setFormData((prevFormData) => ({
+      ...prevFormData,
+      [name]: value,
+    }))
+  }
+
   return (
-    <>
-      <Head>
-        <title>Join Our Team - indiajobsupport</title>
-        <link
-          rel="canonical"
-          href="https://www.indiajobsupport.com/contact"
-          key="canonical"
-        />
-        <meta
-          name="description"
-          content="Contact indiajobsupport support for assistance."
-        />
-      </Head>
-      <Header />
-      <div className="bg-gray-100 py-12 px-4">
-        <div className="max-w-6xl mx-auto">
-          <div className="px-4 md:px-8 py-10 md:py-16 max-w-screen-md mx-auto">
-            <h1 className="text-3xl font-bold mb-6">Join Our Team</h1>
-            <p className="text-lg mb-6">
-              The only way to reach us is through email:{' '}
-              <a
-                className="text-blue-600"
-                href="mailto:support@indiajobsupport.com"
-              >
-                support@indiajobsupport.com
-              </a>
-            </p>
-            <p className="text-lg mb-6">
-              We will try to respond to your email within 24 hours.
-            </p>
-            <Link href="/">
-              <span className="text-blue-600 hover:underline">
-                Back to Home
-              </span>
-            </Link>
+    <section id="join-our-team" className="pb-12 px-5 bg-gray-100 pt-24">
+      <div className="container mx-auto">
+        <h2 className="text-3xl font-bold mb-6 text-center">
+          Join Our Team Of Developers
+        </h2>
+        <form onSubmit={(e) => handleSubmit(e)} className="max-w-lg mx-auto">
+          <div className="grid grid-cols-2 gap-4 mb-4 md:grid-cols-1">
+            <div>
+              <label htmlFor="name" className="block font-semibold mb-2">
+                Name
+              </label>
+              <input
+                type="text"
+                id="name"
+                value={formData.name}
+                onChange={handleInputChange}
+                placeholder="John Doe"
+                className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                required
+              />
+            </div>
+            <div>
+              <label htmlFor="email" className="block font-semibold mb-2">
+                Email
+              </label>
+              <input
+                type="email"
+                id="email"
+                value={formData.email}
+                placeholder="johndoe@gmail.com"
+                onChange={handleInputChange}
+                className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                required
+              />
+            </div>
+            <div>
+              <label htmlFor="country" className="block font-semibold mb-2">
+                Country
+              </label>
+              <input
+                type="text"
+                id="country"
+                value={formData.country}
+                placeholder="Country"
+                onChange={handleInputChange}
+                className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                required
+              />
+            </div>
+            <div>
+              <label htmlFor="phone" className="block font-semibold mb-2">
+                Phone Number
+              </label>
+              <input
+                type="tel"
+                id="phone"
+                value={formData.phone}
+                placeholder="+XX-XXXXXXXXXX"
+                onChange={handleInputChange}
+                className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                required
+              />
+            </div>
+            <div className="col-span-2">
+              <label htmlFor="query" className="block font-semibold mb-2">
+                Type Your Skills Below
+              </label>
+              <textarea
+                id="query"
+                value={formData.query}
+                placeholder="I am an expert in JavaScript, ReactJs, Java"
+                onChange={handleInputChange}
+                className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                rows={4}
+                required
+              />
+            </div>
           </div>
-        </div>
+          <button
+            type="submit"
+            className="w-full px-6 py-3 text-white font-semibold bg-indigo-700 hover:bg-indigo-600 rounded-md transition-colors duration-300"
+          >
+            Submit
+          </button>
+        </form>
       </div>
-      <Footer />
-    </>
+    </section>
   )
 }
+
+export default JoinOurTeam

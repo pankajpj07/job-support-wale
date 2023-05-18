@@ -6,7 +6,7 @@ import HeroBanner from '@/components/hero'
 import MissionSection from '@/components/mission_section'
 import ServicesSection from '@/components/services_section'
 import WhatsAppSticky from '@/components/whatsapp_sticky'
-import JoinOurTeam from '@/components/get_in_touch'
+import JoinOurTeam from '@/components/join_our_team'
 
 export default function Home() {
   return (
