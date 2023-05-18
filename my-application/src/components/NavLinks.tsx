@@ -1,9 +1,6 @@
+import { NavLinkProps } from '@/types/types'
 import Link from 'next/link'
 
-type NavLinkProps = {
-  href: string
-  text: string
-}
 const NavLink = ({ href, text }: NavLinkProps) => {
   return (
     <Link href={href} passHref legacyBehavior>

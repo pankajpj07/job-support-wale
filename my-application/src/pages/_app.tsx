@@ -1,7 +1,12 @@
 import 'tailwindcss/tailwind.css'
 import Head from 'next/head'
 import { AppProps } from 'next/app'
-import { favicon } from '../constants/constants'
+import {
+  favicon,
+  homePageMetaDescription,
+  homePageMetaKeywords,
+  homePageMetaTitle,
+} from '../constants/constants'
 import { Analytics } from '@vercel/analytics/react'
 
 function App({ Component, pageProps }: AppProps) {
@@ -18,15 +23,9 @@ function App({ Component, pageProps }: AppProps) {
           name="google-site-verification"
           content="gtnv05yQdxw8nDZ2GPZytDTzmTxGnO29cR5BZ82AwvQ"
         />
-        <meta
-          name="description"
-          content="A free online YouTube downloader tool that allows users to download YouTube videos in HD quality in MP4 and various other formats."
-        />
-        <meta
-          name="keywords"
-          content="Youtube downloader, online video downloader, save Youtube videos, download Youtube videos, Youtube video downloader"
-        />
-        <title>IndiaJobSupport - Save Youtube Videos and Audios Easily</title>
+        <meta name="description" content={homePageMetaDescription} />
+        <meta name="keywords" content={homePageMetaKeywords} />
+        <title>{homePageMetaTitle}</title>
         <link
           rel="manifest"
           href="/manifest.json"

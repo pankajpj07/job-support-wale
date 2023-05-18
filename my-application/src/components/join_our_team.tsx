@@ -1,13 +1,13 @@
 import Head from 'next/head'
 import Link from 'next/link'
-import Header from '../components/header'
-import Footer from '../components/footer'
+import Header from './header'
+import Footer from './footer'
 
-export default function ContactUs() {
+export default function JoinOurTeam() {
   return (
     <>
       <Head>
-        <title>Contact Us - indiajobsupport</title>
+        <title>Join Our Team - indiajobsupport</title>
         <link
           rel="canonical"
           href="https://www.indiajobsupport.com/contact"
@@ -22,7 +22,7 @@ export default function ContactUs() {
       <div className="bg-gray-100 py-12 px-4">
         <div className="max-w-6xl mx-auto">
           <div className="px-4 md:px-8 py-10 md:py-16 max-w-screen-md mx-auto">
-            <h1 className="text-3xl font-bold mb-6">Contact Us</h1>
+            <h1 className="text-3xl font-bold mb-6">Join Our Team</h1>
             <p className="text-lg mb-6">
               The only way to reach us is through email:{' '}
               <a

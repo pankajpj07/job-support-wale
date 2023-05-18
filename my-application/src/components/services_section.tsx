@@ -1,10 +1,7 @@
 import Image from 'next/image'
 import { easyJob, supportServices } from '@/constants/constants'
 import { DoubleArrow } from '@mui/icons-material'
-
-type BulletPointProps = {
-  text: string
-}
+import { BulletPointProps } from '@/types/types'
 
 const BulletPoint = ({ text }: BulletPointProps) => {
   return (

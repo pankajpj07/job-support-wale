@@ -1,4 +1,10 @@
 export const companyName = 'IndiaJobSupport'
+export const homePageMetaTitle =
+  'IndiaJobSupport - Best Online Job Support Services from India'
+export const homePageMetaDescription =
+  'IndiaJobSupport provides the best online job support services from India with certified professionals. Get expert assistance for React, Angular, Java, .NET, Python job support, and proxy interview support.'
+export const homePageMetaKeywords =
+  'Online Job Support from India, Job Support Services,React Job Support,Angular Job Support, Java Job Support, .NET Job Support, Python Job Support, Proxy Interview Support, Certified Professionals'
 export const logoPath = '/logo.png'
 export const heroImage = '/hero.jpg'
 export const mission = '/mission.png'
@@ -21,3 +27,12 @@ export const supportServices = [
   'We provide the job support in the USA, the UK, Canada, Australia, UAE, and all other countries.',
   "Usually we don't work for weekends. But however if you have a deadline to finish your task No worries. We are here for you support you on weekends too.",
 ]
+export const emptyFormData={
+  fullName: '',
+  mobileNumber: '',
+  email: '',
+  technology: '',
+  otherTechnology: '',
+  country: '',
+  preferredDate: '',
+}

@@ -1,18 +1,20 @@
-import { useState } from 'react'
+import { MouseEventHandler, useState } from 'react'
 import { logoPath } from '@/constants/constants'
 import Link from 'next/link'
 import Image from 'next/image'
 import { NavLink, NavLinkMobile } from './NavLinks'
+import BookDemoModal from './book_demo_modal'
 
-type NavLinkProps = {
-  href: string
-  text: string
-}
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const [isModalOpen, setIsModalOpen] = useState(false)
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen)
+  }
+
+  const toggleModal: MouseEventHandler<HTMLButtonElement> = (event) => {
+    setIsModalOpen(!isModalOpen)
   }
 
   return (
@@ -29,13 +31,12 @@ const Header = () => {
           <div className={`flex items-center space-x-6  md:block`}>
             <NavLink href="/" text="Home" />
             <NavLink href="/job-support" text="Job Support" />
-            <NavLink href="/join-us" text="Join Us" />
-            <NavLink href="#contact-us" text="Contact Us" />
-            <Link href="/book-demo">
+            <NavLink href="#join-our-team" text="Join Our Team" />
+            <button onClick={toggleModal}>
               <span className="px-4 py-2 text-white bg-black rounded-md hover:bg-gray-800">
                 Book a Demo
               </span>
-            </Link>
+            </button>
           </div>
         </div>
         <div className="sm:hidden">
@@ -82,14 +83,16 @@ const Header = () => {
       <div className={`mt-4 sm:hidden ${isMenuOpen ? 'block' : 'hidden'}`}>
         <NavLinkMobile href="/" text="Home" />
         <NavLinkMobile href="/job-support" text="Job Support" />
-        <NavLinkMobile href="/join-us" text="Join Us" />
-        <NavLinkMobile href="#contact-us" text="Contact Us" />
-        <Link href="/book-demo">
+        <NavLinkMobile href="#join-our-team" text="Join Our Team" />
+        <button onClick={toggleModal}>
           <span className="block py-2 px-4 mt-2 text-white bg-black rounded-md hover:bg-gray-800">
             Book a Demo
           </span>
-        </Link>
+        </button>
       </div>
+      {isModalOpen && (
+        <BookDemoModal isOpen={isModalOpen} toggleModal={toggleModal} />
+      )}
     </header>
   )
 }

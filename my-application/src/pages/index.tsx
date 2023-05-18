@@ -6,7 +6,7 @@ import HeroBanner from '@/components/hero'
 import MissionSection from '@/components/mission_section'
 import ServicesSection from '@/components/services_section'
 import WhatsAppSticky from '@/components/whatsapp_sticky'
-import GetInTouch from '@/components/get_in_touch'
+import JoinOurTeam from '@/components/get_in_touch'
 
 export default function Home() {
   return (
@@ -23,7 +23,7 @@ export default function Home() {
         <HeroBanner />
         <MissionSection />
         <ServicesSection />
-        <GetInTouch />
+        <JoinOurTeam />
         <WhatsAppSticky />
         <Footer />
       </div>

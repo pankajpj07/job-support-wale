@@ -1,7 +1,4 @@
-type ButtonProps = {
-  title: string
-  href: string
-}
+import { ButtonProps } from '@/types/types'
 
 export default function Button({ title, href }: ButtonProps) {
   return (
