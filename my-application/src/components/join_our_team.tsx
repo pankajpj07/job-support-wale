@@ -40,6 +40,7 @@ const JoinOurTeam = () => {
               <input
                 type="text"
                 id="name"
+                name="name"
                 value={formData.name}
                 onChange={handleInputChange}
                 placeholder="John Doe"
@@ -54,6 +55,7 @@ const JoinOurTeam = () => {
               <input
                 type="email"
                 id="email"
+                name="email"
                 value={formData.email}
                 placeholder="johndoe@gmail.com"
                 onChange={handleInputChange}
@@ -68,6 +70,7 @@ const JoinOurTeam = () => {
               <input
                 type="text"
                 id="country"
+                name="country"
                 value={formData.country}
                 placeholder="Country"
                 onChange={handleInputChange}
@@ -82,6 +85,7 @@ const JoinOurTeam = () => {
               <input
                 type="tel"
                 id="phone"
+                name="phone"
                 value={formData.phone}
                 placeholder="+XX-XXXXXXXXXX"
                 onChange={handleInputChange}
@@ -95,6 +99,7 @@ const JoinOurTeam = () => {
               </label>
               <textarea
                 id="query"
+                name="query"
                 value={formData.query}
                 placeholder="I am an expert in JavaScript, ReactJs, Java"
                 onChange={handleInputChange}
