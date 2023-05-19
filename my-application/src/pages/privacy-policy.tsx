@@ -1,7 +1,5 @@
 import {
   companyName,
-  homePageMetaKeywords,
-  privacyMetaDesc,
 } from '../constants/constants'
 import Layout from '@/components/Layout'
 
@@ -9,8 +7,6 @@ export default function PrivacyPolicy() {
   return (
     <Layout
       metaTitle={`Privacy Policy | ${companyName}`}
-      metaDescription={privacyMetaDesc}
-      metaKeywords={homePageMetaKeywords}
       pageHref="terms-and-conditions"
     >
       <div className="min-h-screen bg-gray-100">

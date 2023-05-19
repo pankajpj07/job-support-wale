@@ -9,8 +9,6 @@ export default function TermsAndConditions() {
   return (
     <Layout
       metaTitle={`${companyName} - Terms and Conditions`}
-      metaDescription={tncMetaDesc}
-      metaKeywords={homePageMetaKeywords}
       pageHref="terms-and-conditions"
     >
       <div className="bg-gray-100 py-12 px-4">
