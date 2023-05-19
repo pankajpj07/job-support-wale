@@ -3,7 +3,7 @@ import {
   homePageMetaKeywords,
   privacyMetaDesc,
 } from '../constants/constants'
-import Layout from '@/components/Layout'
+import Layout from '@/pages/Layout'
 
 export default function PrivacyPolicy() {
   return (

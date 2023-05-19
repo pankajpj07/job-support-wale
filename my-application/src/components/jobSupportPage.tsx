@@ -2,7 +2,7 @@ import React from 'react'
 import { useRouter } from 'next/router'
 // import JobSupportSection from './job_support_section'
 import FAQ from './faq'
-import Layout from './Layout'
+import Layout from '../pages/Layout'
 import {
   homePageMetaDescription,
   homePageMetaKeywords,

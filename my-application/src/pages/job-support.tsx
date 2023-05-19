@@ -1,4 +1,4 @@
-import Layout from '@/components/Layout'
+import Layout from '@/pages/Layout'
 import JobSupportSection from '@/components/job_support_section'
 import {
   favicon,
