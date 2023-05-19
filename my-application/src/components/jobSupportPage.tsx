@@ -18,7 +18,7 @@ const JobSupportPage: React.FC = () => {
   const data =
     jobSupportType &&
     jobSupportPageDate[jobSupportType as keyof typeof jobSupportPageDate]
-
+  console.log("data",data)
   return (
     <Layout
       metaTitle={`India Job Support - ${homePageMetaTitle}`}
@@ -26,7 +26,7 @@ const JobSupportPage: React.FC = () => {
       metaKeywords={homePageMetaKeywords}
       pageHref="job-support"
     >
-      <JobSupportSection imagePath={'/frontend.png'} {...data} />
+      {data && <JobSupportSection imagePath={'/frontend.png'} {...data} />}
     </Layout>
   )
 }
