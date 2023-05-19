@@ -3,16 +3,16 @@ import {
   homePageMetaKeywords,
   privacyMetaDesc,
 } from '../constants/constants'
-import Layout from '@/pages/Layout'
+import Layout from '@/components/Layout'
 
 export default function PrivacyPolicy() {
   return (
-    <Layout
-      metaTitle={`Privacy Policy | ${companyName}`}
-      metaDescription={privacyMetaDesc}
-      metaKeywords={homePageMetaKeywords}
-      pageHref="terms-and-conditions"
-    >
+    // <Layout
+    //   metaTitle={`Privacy Policy | ${companyName}`}
+    //   metaDescription={privacyMetaDesc}
+    //   metaKeywords={homePageMetaKeywords}
+    //   pageHref="terms-and-conditions"
+    // >
       <div className="min-h-screen bg-gray-100">
         <div className="py-12 sm:max-w-xl md:max-w-3xl lg:max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="prose prose-lg">
@@ -105,6 +105,6 @@ export default function PrivacyPolicy() {
           </div>
         </div>
       </div>
-    </Layout>
+    // </Layout>
   )
 }

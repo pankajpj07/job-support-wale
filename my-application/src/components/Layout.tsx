@@ -1,9 +1,9 @@
 import Link from 'next/link'
-import Footer from '../components/footer'
+import Footer from './footer'
 import Head from 'next/head'
-import Header from '../components/header'
+import Header from './header'
 import { LayoutProps } from '@/types/types'
-import WhatsAppSticky from '../components/whatsapp_sticky'
+import WhatsAppSticky from './whatsapp_sticky'
 
 const Layout = ({
   metaTitle,

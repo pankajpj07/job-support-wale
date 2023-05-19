@@ -6,7 +6,7 @@ import {
   homePageMetaKeywords,
   homePageMetaTitle,
 } from '@/constants/constants'
-import Layout from '@/pages/Layout'
+import Layout from '@/components/Layout'
 import MissionSection from '@/components/mission_section'
 import FAQ from '@/components/faq'
 
