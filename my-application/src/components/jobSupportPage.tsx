@@ -2,8 +2,6 @@ import React from 'react'
 import { useRouter } from 'next/router'
 import Layout from './Layout'
 import {
-  homePageMetaDescription,
-  homePageMetaKeywords,
   homePageMetaTitle,
   jobSupportPageDate,
 } from '@/constants/constants'
@@ -20,8 +18,6 @@ const JobSupportPage: React.FC = () => {
   return (
     <Layout
       metaTitle={`India Job Support - ${homePageMetaTitle}`}
-      metaDescription={homePageMetaDescription}
-      metaKeywords={homePageMetaKeywords}
       pageHref="job-support"
     >
       {data && <JobSupportSection imagePath={'/frontend.png'} {...data} />}

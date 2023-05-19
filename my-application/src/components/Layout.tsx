@@ -4,11 +4,10 @@ import Head from 'next/head'
 import Header from './header'
 import { LayoutProps } from '@/types/types'
 import WhatsAppSticky from './whatsapp_sticky'
+import { homePageMetaDescription, homePageMetaKeywords } from '@/constants/constants'
 
 const Layout = ({
   metaTitle = '',
-  metaDescription = '',
-  metaKeywords = '',
   pageHref = '',
   children,
 }: LayoutProps) => {
@@ -22,8 +21,8 @@ const Layout = ({
           href={`https://www.indiajobsupport.com/${pageHref}`}
           key="canonical"
         />
-        {/* <meta name="description" content={metaDescription} />
-        <meta name="keywords" content={metaKeywords} /> */}
+        <meta name="description" content={homePageMetaDescription} />
+        <meta name="keywords" content={homePageMetaKeywords} />
       </Head>
       <Header />
       {children}

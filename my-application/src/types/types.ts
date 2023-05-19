@@ -43,8 +43,6 @@ export interface MetricsCardProps {
 
 export interface LayoutProps {
   metaTitle: string
-  metaKeywords: string
-  metaDescription: string
   pageHref: string
   children: ReactNode
 }

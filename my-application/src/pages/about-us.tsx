@@ -1,6 +1,4 @@
 import {
-  homePageMetaDescription,
-  homePageMetaKeywords,
   homePageMetaTitle,
 } from '@/constants/constants'
 import Layout from '@/components/Layout'
@@ -11,8 +9,6 @@ export default function About() {
   return (
     <Layout
       metaTitle={`About us - ${homePageMetaTitle}`}
-      metaDescription={homePageMetaDescription}
-      metaKeywords={homePageMetaKeywords}
       pageHref="about-us"
     >
       <div className="bg-gray-100 py-12 px-4">
