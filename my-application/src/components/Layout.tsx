@@ -6,9 +6,9 @@ import { LayoutProps } from '@/types/types'
 import WhatsAppSticky from './whatsapp_sticky'
 
 const Layout = ({
-  metaTitle,
-  metaDescription,
-  metaKeywords,
+  metaTitle='',
+  metaDescription='',
+  metaKeywords='',
   pageHref = '',
   children,
 }: LayoutProps) => {
@@ -25,10 +25,10 @@ const Layout = ({
         <meta name="description" content={metaDescription} />
         <meta name="keywords" content={metaKeywords} />
       </Head>
-      {/* <Header /> */}
+      <Header />
       {children}
       <WhatsAppSticky/>
-      {/* <Footer /> */}
+      <Footer />
     </>
   )
 }
