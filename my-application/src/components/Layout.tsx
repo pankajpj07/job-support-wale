@@ -6,13 +6,13 @@ import { LayoutProps } from '@/types/types'
 import WhatsAppSticky from './whatsapp_sticky'
 
 const Layout = ({
-  metaTitle='',
-  metaDescription='',
-  metaKeywords='',
+  metaTitle = '',
+  metaDescription = '',
+  metaKeywords = '',
   pageHref = '',
   children,
 }: LayoutProps) => {
-  console.log("metaTitle",pageHref)
+  console.log('metaTitle', pageHref)
   return (
     <>
       <Head>
@@ -22,12 +22,12 @@ const Layout = ({
           href={`https://www.indiajobsupport.com/${pageHref}`}
           key="canonical"
         />
-        <meta name="description" content={metaDescription} />
-        <meta name="keywords" content={metaKeywords} />
+        {/* <meta name="description" content={metaDescription} />
+        <meta name="keywords" content={metaKeywords} /> */}
       </Head>
       <Header />
       {children}
-      <WhatsAppSticky/>
+      <WhatsAppSticky />
       <Footer />
     </>
   )

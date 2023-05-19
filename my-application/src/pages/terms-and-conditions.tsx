@@ -1,11 +1,8 @@
-import Head from 'next/head'
 import {
   companyName,
   homePageMetaKeywords,
   tncMetaDesc,
 } from '../constants/constants'
-import Header from '../components/header'
-import Footer from '../components/footer'
 import Layout from '@/components/Layout'
 
 export default function TermsAndConditions() {
