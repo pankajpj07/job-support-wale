@@ -59,22 +59,22 @@ const Footer = () => {
               <h2 className="text-xl font-bold mb-4">Quick Links</h2>
               <ul className="space-y-2">
                 <li>
-                  <Link href="/about-us" passHref legacyBehavior>
-                    <a className="text-white hover:text-gray-500">About Us</a>
+                  <Link href="/about-us">
+                    <span className="text-white hover:text-gray-500">About Us</span>
                   </Link>
                 </li>
                 <li>
-                  <Link href="/privacy-policy" passHref legacyBehavior>
-                    <a className="text-white hover:text-gray-500">
+                  <Link href="/privacy-policy">
+                    <span className="text-white hover:text-gray-500">
                       Privacy Policy
-                    </a>
+                    </span>
                   </Link>
                 </li>
                 <li>
-                  <Link href="/terms-and-conditions" passHref legacyBehavior>
-                    <a className="text-white hover:text-gray-500">
+                  <Link href="/terms-and-conditions">
+                    <span className="text-white hover:text-gray-500">
                       Terms and Conditions
-                    </a>
+                    </span>
                   </Link>
                 </li>
               </ul>
