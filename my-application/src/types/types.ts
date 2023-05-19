@@ -1,3 +1,5 @@
+import { ReactNode } from 'react'
+
 export interface BulletPointProps {
   text: string
 }
@@ -30,4 +32,25 @@ export interface ModalProps {
 export enum formType {
   CONTACT = 'contact',
   DEMO = 'demo',
+}
+
+export interface MetricsCardProps {
+  bgColor: string
+  icon: any
+  metrics: string
+  text: string
+}
+
+export interface LayoutProps {
+  metaTitle: string
+  metaKeywords: string
+  metaDescription: string
+  pageHref: string
+  children: ReactNode
+}
+export interface JobSupportSectionProps {
+  imagePath: string
+  skills?: string
+  skillsText?: string
+  skillsServiceText?: string
 }

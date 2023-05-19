@@ -3,23 +3,23 @@ import Header from '../components/header'
 import Footer from '../components/footer'
 import {
   homePageMetaDescription,
+  homePageMetaKeywords,
   homePageMetaTitle,
 } from '@/constants/constants'
+import Layout from '@/components/Layout'
+import MissionSection from '@/components/mission_section'
+import FAQ from '@/components/faq'
 
 export default function About() {
   return (
-    <>
-      <Head>
-        <title>About us - {homePageMetaTitle}</title>
-        <link
-          rel="canonical"
-          href="https://www.indiajobsupport.com/about-us"
-          key="canonical"
-        />
-        <meta name="description" content={homePageMetaDescription} />
-      </Head>
-      <Header />
+    <Layout
+      metaTitle={`About us - ${homePageMetaTitle}`}
+      metaDescription={homePageMetaDescription}
+      metaKeywords={homePageMetaKeywords}
+      pageHref="about-us"
+    >
       <div className="bg-gray-100 py-12 px-4">
+        <MissionSection />
         <div className="max-w-6xl mx-auto">
           <h1 className="text-4xl font-bold text-gray-900 mb-4">About Us</h1>
           <p className="text-lg text-gray-700 mb-8">
@@ -56,7 +56,7 @@ export default function About() {
           </p>
         </div>
       </div>
-      <Footer />
-    </>
+      <FAQ />
+    </Layout>
   )
 }

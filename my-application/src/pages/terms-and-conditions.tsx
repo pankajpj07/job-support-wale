@@ -1,24 +1,21 @@
 import Head from 'next/head'
-import { companyName } from '../constants/constants'
+import {
+  companyName,
+  homePageMetaKeywords,
+  tncMetaDesc,
+} from '../constants/constants'
 import Header from '../components/header'
 import Footer from '../components/footer'
+import Layout from '@/components/Layout'
 
 export default function TermsAndConditions() {
   return (
-    <>
-      <Head>
-        <title>{companyName} - Terms and Conditions</title>
-        <link
-          rel="canonical"
-          href="https://www.indiajobsupport.com/terms-and-conditions"
-          key="canonical"
-        />
-        <meta
-          name="description"
-          content="Read our Terms and Conditions to learn about your rights and obligations when using {companyName} services. Find out how we protect your privacy and what you need to know before using our platform."
-        ></meta>
-      </Head>
-      <Header />
+    <Layout
+      metaTitle={`${companyName} - Terms and Conditions`}
+      metaDescription={tncMetaDesc}
+      metaKeywords={homePageMetaKeywords}
+      pageHref="terms-and-conditions"
+    >
       <div className="bg-gray-100 py-12 px-4">
         <main className="max-w-6xl mx-auto">
           <h1 className="text-4xl font-bold mb-8">Terms and Conditions</h1>
@@ -117,7 +114,6 @@ export default function TermsAndConditions() {
           </p>
         </main>
       </div>
-      <Footer />
-    </>
+    </Layout>
   )
 }

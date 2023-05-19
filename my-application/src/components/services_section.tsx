@@ -1,16 +1,6 @@
 import Image from 'next/image'
 import { easyJob, supportServices } from '@/constants/constants'
-import { DoubleArrow } from '@mui/icons-material'
-import { BulletPointProps } from '@/types/types'
-
-const BulletPoint = ({ text }: BulletPointProps) => {
-  return (
-    <li className="flex mb-5 text-sm md:text-lg ld:text-xl text-justify">
-      <DoubleArrow className="mr-2 text-black" />
-      <span>{text}</span>
-    </li>
-  )
-}
+import BulletPoint from './bulletpoints'
 
 const ServicesSection = () => {
   return (
