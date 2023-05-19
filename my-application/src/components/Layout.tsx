@@ -25,7 +25,7 @@ const Layout = ({
         <meta name="description" content={metaDescription} />
         <meta name="keywords" content={metaKeywords} />
       </Head>
-      <Header />
+      {/* <Header /> */}
       {children}
       <WhatsAppSticky/>
       <Footer />
