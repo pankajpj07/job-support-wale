@@ -28,7 +28,7 @@ const Layout = ({
       {/* <Header /> */}
       {children}
       <WhatsAppSticky/>
-      <Footer />
+      {/* <Footer /> */}
     </>
   )
 }
