@@ -54,3 +54,11 @@ export interface JobSupportSectionProps {
   skillsText?: string
   skillsServiceText?: string
 }
+
+export interface JobSupportPageDataProps {
+  [key: string]: {
+    skills: string
+    skillsText: string
+    skillsServiceText: string
+  }
+}

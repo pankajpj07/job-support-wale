@@ -11,7 +11,7 @@ const JobSupportSection = ({
   imagePath,
   skills,
   skillsText,
-  skillsServiceText = '',
+  skillsServiceText,
 }: JobSupportSectionProps) => {
   return (
     <div>
@@ -19,7 +19,7 @@ const JobSupportSection = ({
         <div className="max-w-6xl mx-auto flex items-center">
           <div className="w-2/3">
             <h2 className="text-xl md:text-2xl font-bold mb-4">
-              {`${skills ? skills + ' ' : ''}Online Job Support From India`}
+              {`Online ${skills ? skills + ' ' : ''}Job Support From India`}
             </h2>
             <p className="text-xs md:text-lg">
               {skillsText ??

@@ -1,3 +1,5 @@
+import { JobSupportPageDataProps } from '@/types/types'
+
 export const companyName = 'IndiaJobSupport'
 export const homePageMetaTitle =
   'IndiaJobSupport - Best Online Job Support Services from India'
@@ -109,3 +111,42 @@ export const faqData = [
       'You can pay for support using any service like Gpay, Paytm, PhonePay, UPI, Bank Transfer (India) or PayPal (outside India).',
   },
 ]
+
+export const jobSupportPageDate: JobSupportPageDataProps = {
+  'frontend-support': {
+    skills: 'Frontend',
+    skillsText:
+      'IndiaJobSupport offers comprehensive online frontend job support from India, providing expert assistance and guidance to overcome challenges, enhance skills, and ensure successful project execution in frontend development.',
+    skillsServiceText:
+      'IndiaJobSupport is a leading provider of online frontend job support from India. We have extensive expertise in various frontend languages and frameworks, including HTML, CSS, JavaScript, React, Angular, Vue.js, TypeScript, Bootstrap, and jQuery. Our team of skilled professionals has worked with clients worldwide, helping them overcome frontend development challenges and achieve their project goals. Whether you need assistance with responsive design, UI/UX optimization, performance optimization, or any other frontend aspect, IndiaJobSupport is here to provide you with the necessary support and guidance.',
+  },
+
+  'backend-support': {
+    skills: 'Backend',
+    skillsText:
+      'IndiaJobSupport offers comprehensive online backend job support from India, providing expert assistance and guidance to overcome challenges, enhance skills, and ensure successful project execution in backend development.',
+    skillsServiceText:
+      'IndiaJobSupport is a leading provider of online backend job support from India. We have extensive expertise in various backend languages and frameworks, including Node.js, Python, Java, PHP, Ruby, and .NET. Our experienced professionals have worked with clients globally, helping them tackle backend development complexities and achieve their project objectives. Whether you need assistance with API development, database management, server configuration, or any other backend aspect, IndiaJobSupport is here to provide you with reliable support and guidance.',
+  },
+  'full-stack-support': {
+    skills: 'Full Stack',
+    skillsText:
+      'IndiaJobSupport offers comprehensive online full stack job support from India, providing expert assistance and guidance to overcome challenges, enhance skills, and ensure successful project execution in full stack development.',
+    skillsServiceText:
+      'IndiaJobSupport is a leading provider of online full stack job support from India. Our team of professionals possesses extensive knowledge in both frontend and backend technologies, including HTML, CSS, JavaScript, React, Angular, Node.js, Python, Java, and more. We have a proven track record of assisting clients worldwide in building full stack applications, integrating frontend and backend components seamlessly. Whether you need guidance on architecture design, API integration, or full stack debugging, IndiaJobSupport is here to support you at every step.',
+  },
+  'devops-support': {
+    skills: 'DevOps',
+    skillsText:
+      'IndiaJobSupport offers comprehensive online DevOps job support from India, providing expert assistance and guidance to overcome challenges, enhance skills, and ensure efficient software development and deployment.',
+    skillsServiceText:
+      'IndiaJobSupport is a leading provider of online DevOps job support from India. Our team of DevOps professionals has extensive experience in various tools and technologies, including Docker, Kubernetes, Jenkins, Git, AWS, Azure, and more. We can help you streamline your software development and deployment processes, automate workflows, and implement best practices. Whether you need assistance with infrastructure setup, continuous integration and delivery, or monitoring and troubleshooting, IndiaJobSupport is here to provide you with reliable DevOps support.',
+  },
+  'dotnet-support': {
+    skills: 'DOTNET',
+    skillsText:
+      'IndiaJobSupport offers comprehensive online .NET job support from India, providing expert assistance and guidance to overcome challenges, enhance skills, and ensure successful project execution in .NET development.',
+    skillsServiceText:
+      'IndiaJobSupport is a leading provider of online .NET job support from India. Our team of experienced .NET professionals has in-depth knowledge of the .NET framework, C#, ASP.NET, and related technologies. We can assist you in developing, debugging, and maintaining .NET applications, implementing best practices, and optimizing performance. Whether you need help with web development, desktop applications, or cloud-based solutions, IndiaJobSupport is here to provide you with reliable support and guidance for your .NET projects.',
+  },
+}

@@ -20,12 +20,27 @@ const HeroBanner = () => {
           GET JOB SUPPORT FROM INDIA BY EXPERIENCED PROFESSIONALS
         </h1>
         <div className="grid grid-cols-2 md:grid-cols-3 gap-10 justify-center">
-          <Button href="/frontend-support" title="Frontend Job Support" />
-          <Button href="/backend-support" title="Backend Job Support" />
-          <Button href="/full-stack-support" title="Full Stack Job Support" />
-          <Button href="/devops-support" title="DevOps Job Support" />
-          <Button href="/dotnet-support" title="Dotnet Job Support" />
-          <Button href="/task-based-support" title="Task Based Support" />
+          <Button
+            href="/india-job-support/frontend-support"
+            title="Frontend Job Support"
+          />
+          <Button
+            href="/india-job-support/backend-support"
+            title="Backend Job Support"
+          />
+          <Button
+            href="/india-job-support/full-stack-support"
+            title="Full Stack Job Support"
+          />
+          <Button
+            href="/india-job-support/devops-support"
+            title="DevOps Job Support"
+          />
+          <Button
+            href="/india-job-support/dotnet-support"
+            title="Dotnet Job Support"
+          />
+          <Button href="/job-support" title="Other Support" />
         </div>
       </div>
     </div>
