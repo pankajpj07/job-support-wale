@@ -51,25 +51,25 @@ export const emptyContactFormData = {
 
 export const metricsData = [
   {
-    bgColor: 'pink-100',
+    bgColor: 'bg-pink-100',
     icon: '😊',
     metrics: '1000+',
     text: 'Happy clients',
   },
   {
-    bgColor: 'green-100',
+    bgColor: 'bg-green-100',
     icon: '⏲',
     metrics: '24/7',
     text: 'Availability Time',
   },
   {
-    bgColor: 'red-100',
+    bgColor: 'bg-red-100',
     icon: '👍',
     metrics: '100%',
     text: 'Resource Availability',
   },
   {
-    bgColor: 'yellow-100',
+    bgColor: 'bg-yellow-100',
     icon: '🌏',
     metrics: '4+',
     text: 'Countries',

@@ -40,7 +40,7 @@ const HeroBanner = () => {
             href="/india-job-support/dotnet-support"
             title="Dotnet Job Support"
           />
-          <Button href="/job-support" title="Other Support" />
+          <Button href="/job-support" title="Other Job Support" />
         </div>
       </div>
     </div>

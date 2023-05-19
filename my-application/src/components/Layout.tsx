@@ -3,6 +3,7 @@ import Footer from './footer'
 import Head from 'next/head'
 import Header from './header'
 import { LayoutProps } from '@/types/types'
+import WhatsAppSticky from './whatsapp_sticky'
 
 const Layout = ({
   metaTitle,
@@ -25,6 +26,7 @@ const Layout = ({
       </Head>
       <Header />
       {children}
+      <WhatsAppSticky/>
       <Footer />
     </>
   )
