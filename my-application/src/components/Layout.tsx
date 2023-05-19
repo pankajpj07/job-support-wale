@@ -12,6 +12,7 @@ const Layout = ({
   pageHref = '',
   children,
 }: LayoutProps) => {
+  console.log("metaTitle",pageHref)
   return (
     <>
       <Head>
