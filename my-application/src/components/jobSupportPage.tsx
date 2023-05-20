@@ -11,7 +11,6 @@ const JobSupportPage: React.FC = () => {
   const data =
     jobSupportType &&
     jobSupportPageDate[jobSupportType as keyof typeof jobSupportPageDate]
-  console.log('data', data)
   return (
     <Layout
       metaTitle={`India Job Support - ${homePageMetaTitle}`}
