@@ -11,7 +11,7 @@ const JoinOurTeam = () => {
     e.preventDefault()
     // Handle form submission logic here
     try {
-      // Perform form submission logic here
+    // Perform form submission logic here
       await writeToSheet(formData, 'contact')
       // Reset form fields
       setFormData(emptyContactFormData)
