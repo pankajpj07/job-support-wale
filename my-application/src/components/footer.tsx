@@ -49,8 +49,11 @@ const Footer = () => {
               </div>
               <div className="flex items-center">
                 <Email className="text-white mr-2" />
-                <a href="mailto:pankaj12.pj88@gmail.com" className="text-white">
-                  pankaj12.pj88@gmail.com
+                <a
+                  href="mailto:help@indiajobsupport.com"
+                  className="text-white"
+                >
+                  help@indiajobsupport.com
                 </a>
               </div>
             </div>

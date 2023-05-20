@@ -2,18 +2,26 @@ import { emptyDemoFormData } from '@/constants/constants'
 import writeToSheet from '@/lib/googleSheetsAPI'
 import { FormData, ModalProps } from '@/types/types'
 import { useState, ChangeEvent, FormEvent } from 'react'
+import { useRouter } from 'next/router'
 
 const BookDemoModal = ({ isOpen, toggleModal }: ModalProps) => {
   const [formData, setFormData] = useState<FormData>(emptyDemoFormData)
-
-  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
+  const router = useRouter()
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault()
-    // Perform form submission logic here
-    writeToSheet(formData, 'demo')
-    // Reset form fields
-    setFormData(emptyDemoFormData)
-    // Close the modal
-    toggleModal()
+    try {
+      // Perform form submission logic here
+      await writeToSheet(formData, 'demo')
+      // Reset form fields
+      setFormData(emptyDemoFormData)
+      // Close the modal
+      toggleModal()
+      // push to thankyou page
+      router.push('/thankyou')
+    } catch (error) {
+      console.log('some error occured')
+      router.push('/error')
+    }
   }
 
   const handleInputChange = (

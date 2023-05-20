@@ -1,17 +1,26 @@
 import { emptyContactFormData } from '@/constants/constants'
 import writeToSheet from '@/lib/googleSheetsAPI'
 import { FormData } from '@/types/types'
+import { useRouter } from 'next/router'
 import React, { FormEvent, useState } from 'react'
 
 const JoinOurTeam = () => {
   const [formData, setFormData] = useState<FormData>(emptyContactFormData)
-
-  const handleSubmit = (e: FormEvent) => {
+  const router = useRouter()
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault()
     // Handle form submission logic here
-    // You can access the form field values using the formData state object
-    writeToSheet(formData, 'contact')
-    console.log(formData)
+    try {
+      // Perform form submission logic here
+      await writeToSheet(formData, 'contact')
+      // Reset form fields
+      setFormData(emptyContactFormData)
+      // push to thankyou page
+      router.push('/thankyou')
+    } catch (error) {
+      console.log('Some error occured')
+      router.push('/error')
+    }
   }
 
   const handleInputChange = (

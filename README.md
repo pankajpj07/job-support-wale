@@ -34,7 +34,7 @@ For detailed documentation and guidelines on using IndiaJobSupport, please refer
 
 ## Support
 
-If you encounter any issues, have questions, or need assistance, please reach out to our support team at [support@indiajobsupport.com](mailto:support@indiajobsupport.com). We are available to provide prompt support and address any concerns you may have.
+If you encounter any issues, have questions, or need assistance, please reach out to our support team at [help@indiajobsupport.com](mailto:help@indiajobsupport.com). We are available to provide prompt support and address any concerns you may have.
 
 ## Contributions
 

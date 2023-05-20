@@ -48,6 +48,7 @@ const writeToSheet = async (formData, formType) => {
     console.log('Data written to Google Sheets successfully.')
   } catch (error) {
     console.error('Error writing data to Google Sheets:', error)
+    throw new Error('Form submission failed.')
   }
 }
 
