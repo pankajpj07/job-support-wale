@@ -6,20 +6,21 @@ import React, { FormEvent, useState } from 'react'
 
 const JoinOurTeam = () => {
   const [formData, setFormData] = useState<FormData>(emptyContactFormData)
+  const [error, setError] = useState<string>('')
   const router = useRouter()
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault()
     // Handle form submission logic here
     try {
-    // Perform form submission logic here
+      // Perform form submission logic here
       await writeToSheet(formData, 'contact')
       // Reset form fields
       setFormData(emptyContactFormData)
       // push to thankyou page
       router.push('/thankyou')
     } catch (error) {
-      console.log('Some error occured')
-      router.push('/error')
+      console.log('error occurred in bjoin our team form', error)
+      setError('An error occurred. Please try again.')
     }
   }
 

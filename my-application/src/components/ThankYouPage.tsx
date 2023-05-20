@@ -3,7 +3,7 @@ import Link from 'next/link'
 
 const ThankYouPage: React.FC = () => {
   return (
-    <div className="flex flex-col items-center justify-center h-screen -mt-10">
+    <div className="flex flex-col p-5 items-center justify-center h-screen -mt-16">
       <h1 className="text-5xl font-bold mb-6">Thank You!</h1>
       <svg
         xmlns="http://www.w3.org/2000/svg"

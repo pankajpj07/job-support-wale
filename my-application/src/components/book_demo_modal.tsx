@@ -6,6 +6,7 @@ import { useRouter } from 'next/router'
 
 const BookDemoModal = ({ isOpen, toggleModal }: ModalProps) => {
   const [formData, setFormData] = useState<FormData>(emptyDemoFormData)
+  const [error, setError] = useState<string>('')
   const router = useRouter()
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault()
@@ -19,8 +20,8 @@ const BookDemoModal = ({ isOpen, toggleModal }: ModalProps) => {
       // push to thankyou page
       router.push('/thankyou')
     } catch (error) {
-      console.log('some error occured')
-      router.push('/error')
+      console.log('error occurred in book a demo form', error)
+      setError('An error occurred. Please try again.')
     }
   }
 
@@ -40,6 +41,7 @@ const BookDemoModal = ({ isOpen, toggleModal }: ModalProps) => {
         <div className="fixed inset-0 z-50 flex items-center justify-center">
           <div className="absolute inset-0 bg-black opacity-50"></div>
           <div className="relative z-10 p-8 bg-white rounded-lg shadow-lg">
+            {error && <div className="mb-4 text-red-500">{error}</div>}
             <h2 className="text-2xl font-bold mb-4">Book a Demo with Us</h2>
             <form onSubmit={handleSubmit}>
               <div className="mb-4">
