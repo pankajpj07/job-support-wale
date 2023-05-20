@@ -4,12 +4,12 @@ import { favicon, homePageMetaTitle } from '@/constants/constants'
 
 const JobSupport = () => {
   return (
-    // <Layout
-    //   metaTitle={`Job Support - ${homePageMetaTitle}`}
-    //   pageHref="job-support"
-    // >
-    <JobSupportSection imagePath={favicon} />
-    // </Layout>
+    <Layout
+      metaTitle={`Job Support - ${homePageMetaTitle}`}
+      pageHref="job-support"
+    >
+      <JobSupportSection imagePath={favicon} />
+    </Layout>
   )
 }
 
