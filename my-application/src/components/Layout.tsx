@@ -4,15 +4,12 @@ import Head from 'next/head'
 import Header from './header'
 import { LayoutProps } from '@/types/types'
 import WhatsAppSticky from './whatsapp_sticky'
+import ErrorBoundary from './ErrorBoundary'
 
-const Layout = ({
-  metaTitle = '',
-  pageHref = '',
-  children,
-}: LayoutProps) => {
+const Layout = ({ metaTitle = '', pageHref = '', children }: LayoutProps) => {
   console.log('metaTitle', pageHref)
   return (
-    <>
+    <ErrorBoundary>
       <Head>
         <title>{metaTitle}</title>
         <Link
@@ -25,7 +22,7 @@ const Layout = ({
       {children}
       <WhatsAppSticky />
       <Footer />
-    </>
+    </ErrorBoundary>
   )
 }
 

@@ -1,6 +1,4 @@
-import {
-  companyName,
-} from '../constants/constants'
+import { companyName } from '../constants/constants'
 import Layout from '@/components/Layout'
 
 export default function PrivacyPolicy() {

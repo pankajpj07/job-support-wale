@@ -60,3 +60,7 @@ export interface JobSupportPageDataProps {
     skillsServiceText: string
   }
 }
+
+export interface ErrorBoundaryState {
+  hasError: boolean
+}

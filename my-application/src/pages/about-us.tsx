@@ -1,16 +1,11 @@
-import {
-  homePageMetaTitle,
-} from '@/constants/constants'
+import { homePageMetaTitle } from '@/constants/constants'
 import Layout from '@/components/Layout'
 import MissionSection from '@/components/mission_section'
 import FAQ from '@/components/faq'
 
 export default function About() {
   return (
-    <Layout
-      metaTitle={`About us - ${homePageMetaTitle}`}
-      pageHref="about-us"
-    >
+    <Layout metaTitle={`About us - ${homePageMetaTitle}`} pageHref="about-us">
       <div className="bg-gray-100 py-12 px-4">
         <MissionSection />
         <div className="max-w-6xl mx-auto">
