@@ -10,14 +10,14 @@ const Layout = ({ metaTitle = '', pageHref = '', children }: LayoutProps) => {
   console.log('metaTitle', pageHref)
   return (
     <ErrorBoundary>
-      <Head>
+      {/* <Head>
         <title>{metaTitle}</title>
         <Link
           rel="canonical"
           href={`https://www.indiajobsupport.com/${pageHref}`}
           key="canonical"
         />
-      </Head>
+      </Head> */}
       <Header />
       {children}
       <WhatsAppSticky />
