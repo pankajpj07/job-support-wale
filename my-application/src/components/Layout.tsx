@@ -1,4 +1,3 @@
-import Link from 'next/link'
 import Footer from './footer'
 import Head from 'next/head'
 import Header from './header'
@@ -15,7 +14,7 @@ const Layout = ({ metaTitle = '', pageHref = '', children }: LayoutProps) => {
     <ErrorBoundary>
       <Head>
         <title>{metaTitle}</title>
-        <Link
+        <link
           rel="canonical"
           href={`https://www.indiajobsupport.com/${pageHref}`}
           key="canonical"
