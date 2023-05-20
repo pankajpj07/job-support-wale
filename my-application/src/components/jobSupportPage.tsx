@@ -16,12 +16,14 @@ const JobSupportPage: React.FC = () => {
     jobSupportPageDate[jobSupportType as keyof typeof jobSupportPageDate]
   console.log('data', data)
   return (
-    <Layout
+    <>
+    {/* <Layout
       metaTitle={`India Job Support - ${homePageMetaTitle}`}
       pageHref="job-support"
-    >
+      > */}
       {data && <JobSupportSection imagePath={'/frontend.png'} {...data} />}
-    </Layout>
+    {/* </Layout> */}
+      </>
   )
 }
 
