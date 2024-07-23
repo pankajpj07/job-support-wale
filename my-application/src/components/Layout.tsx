@@ -16,7 +16,7 @@ const Layout = ({ metaTitle = '', pageHref = '', children }: LayoutProps) => {
         <title>{metaTitle}</title>
         <link
           rel="canonical"
-          href={`https://www.indiajobsupport.com/${pageHref}`}
+          href={`https://www.indiajobsupport.in/${pageHref}`}
           key="canonical"
         />
         <meta name="description" content={homePageMetaDescription} />

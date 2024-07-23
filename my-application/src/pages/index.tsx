@@ -18,7 +18,7 @@ export default function Home() {
       <Head>
         <link
           rel="canonical"
-          href="https://www.indiajobsupport.com"
+          href="https://www.indiajobsupport.in"
           key="canonical"
         />
       </Head>

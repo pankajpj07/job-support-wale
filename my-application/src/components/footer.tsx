@@ -50,10 +50,10 @@ const Footer = () => {
               <div className="flex items-center">
                 <Email className="text-white mr-2" />
                 <a
-                  href="mailto:support@indiajobsupport.com"
+                  href="mailto:support@indiajobsupport.in"
                   className="text-white"
                 >
-                  support@indiajobsupport.com
+                  support@indiajobsupport.in
                 </a>
               </div>
             </div>
