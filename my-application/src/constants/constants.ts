@@ -2,11 +2,11 @@ import { JobSupportPageDataProps } from '@/types/types'
 
 export const companyName = 'IndiaJobSupport'
 export const homePageMetaTitle =
-  'IndiaJobSupport - Best Online Job Support Services from India'
+  'IndiaJobSupport - Get Job & Interview Proxy Support From India'
 export const homePageMetaDescription =
-  'IndiaJobSupport provides the best online job support services from India with certified professionals. Get expert assistance for React, Angular, Java, .NET, Python job support, and proxy interview support.'
+  'IndiaJobSupport provides the best job proxy services from India with certified professionals. Get expert assistance for React, Angular, Java, .NET, Python job support, and proxy interview support.'
 export const homePageMetaKeywords =
-  'Online Job Support from India, Job Support Services,React Job Support,Angular Job Support, Java Job Support, .NET Job Support, Python Job Support, Proxy Interview Support, Certified Professionals'
+  'Online Job proxy from India, Job Proxy Services,React Job Proxy,Angular Job Proxy, Java Job Proxy, .NET Job Proxy, Python Job Proxy, Proxy Interview, Certified Professionals'
 export const tncMetaDesc = `Read our Terms and Conditions to learn about your rights and obligations when using ${companyName} services. Find out how we protect your privacy and what you need to know before using our platform.`
 export const privacyMetaDesc = `Read our privacy policy to learn how we handle and protect your personal information while using ${companyName} website, applications, and related services.`
 export const logoPath = '/logo.png'
