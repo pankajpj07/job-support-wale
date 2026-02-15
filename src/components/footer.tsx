@@ -50,10 +50,10 @@ const Footer = () => {
               <div className="flex items-center">
                 <Email className="text-white mr-2" />
                 <a
-                  href="mailto:support@indiajobsupport.in"
+                  href="mailto:pankaj.jobs247@gmail.com"
                   className="text-white"
                 >
-                  support@indiajobsupport.in
+                  pankaj.jobs247@gmail.com
                 </a>
               </div>
             </div>
@@ -61,6 +61,34 @@ const Footer = () => {
             <div>
               <h2 className="text-xl font-bold mb-4">Quick Links</h2>
               <ul className="space-y-2">
+                <li>
+                  <Link href="/services">
+                    <span className="text-white hover:text-gray-500">
+                      Services
+                    </span>
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/pricing">
+                    <span className="text-white hover:text-gray-500">
+                      Pricing
+                    </span>
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/how-it-works">
+                    <span className="text-white hover:text-gray-500">
+                      How It Works
+                    </span>
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/case-studies">
+                    <span className="text-white hover:text-gray-500">
+                      Case Studies
+                    </span>
+                  </Link>
+                </li>
                 <li>
                   <Link href="/about-us">
                     <span className="text-white hover:text-gray-500">
@@ -82,13 +110,23 @@ const Footer = () => {
                     </span>
                   </Link>
                 </li>
+                <li className="pt-2 mt-2 border-t border-gray-700">
+                  <span className="text-gray-400 text-sm">Serving:</span>
+                  <span className="ml-2">
+                    <Link href="/locations/usa" className="text-white hover:text-gray-500">USA</Link>
+                    {' · '}
+                    <Link href="/locations/uk" className="text-white hover:text-gray-500">UK</Link>
+                    {' · '}
+                    <Link href="/locations/canada" className="text-white hover:text-gray-500">Canada</Link>
+                  </span>
+                </li>
               </ul>
             </div>
           </div>
         </div>
       </div>
       <div className="bg-black text-white text-sm text-center p-3">
-        © IndiaJobSupport 2023. All rights reserved
+        © IndiaJobSupport 2026. All rights reserved
       </div>
     </footer>
   )

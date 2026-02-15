@@ -5,7 +5,7 @@ export default function PrivacyPolicy() {
   return (
     <Layout
       metaTitle={`Privacy Policy | ${companyName}`}
-      pageHref="terms-and-conditions"
+      pageHref="privacy-policy"
     >
       <div className="min-h-screen bg-gray-100">
         <div className="py-12 sm:max-w-xl md:max-w-3xl lg:max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">

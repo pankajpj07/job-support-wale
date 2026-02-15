@@ -23,7 +23,7 @@ const Layout = ({ metaTitle = '', pageHref = '', children }: LayoutProps) => {
         <meta name="keywords" content={homePageMetaKeywords} />
       </Head>
       <Header />
-      {children}
+      <main id="main-content">{children}</main>
       <WhatsAppSticky />
       <Footer />
     </ErrorBoundary>

@@ -38,6 +38,8 @@ const writeToSheet = async (formData, formType) => {
               formData.technology,
               formData.preferredDate,
               formData.otherTechnology,
+              formData.projectDescription || '',
+              formData.urgency || '',
             ]),
       ],
     ]

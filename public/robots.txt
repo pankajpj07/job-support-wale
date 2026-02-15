@@ -1,7 +1,15 @@
-# Block all crawlers for /accounts
-User-agent: *
-Disallow: /accounts
-
-# Allow all crawlers
+# *
 User-agent: *
 Allow: /
+
+# *
+User-agent: *
+Disallow: /api/
+Disallow: /_next/
+Disallow: /thankyou
+
+# Host
+Host: https://www.indiajobsupport.in
+
+# Sitemaps
+Sitemap: https://www.indiajobsupport.in/sitemap.xml

@@ -4,9 +4,10 @@ import BulletPoint from './bulletpoints'
 
 const ServicesSection = () => {
   return (
-    <section className="py-12 px-5 bg-gray-100 text-center">
-      <div className="font-bold text-3xl mb-5 md:mb-16">Support Services</div>
-      <div className="container mx-auto flex flex-col md:flex-row items-center">
+    <section className="py-16 md:py-24 px-4 md:px-8 bg-slate-50 text-center">
+      <div className="max-w-6xl mx-auto">
+        <h2 className="text-2xl md:text-3xl font-bold text-slate-900 mb-8 md:mb-12">Support services</h2>
+        <div className="container mx-auto flex flex-col md:flex-row items-center text-left">
         <div className="md:w-2/6 flex justify-center mb-8 md:mb-0 md:mr-8">
           <div className="w-64 h-64 md:w-80 md:h-80">
             <Image
@@ -24,6 +25,7 @@ const ServicesSection = () => {
               <BulletPoint key={index} text={point} />
             ))}
           </ul>
+        </div>
         </div>
       </div>
     </section>

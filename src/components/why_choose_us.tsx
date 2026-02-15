@@ -4,12 +4,10 @@ import BulletPoint from './bulletpoints'
 
 const WhyChooseUsSection = () => {
   return (
-    <section className="py-12 px-8 bg-gray-100">
+    <section className="py-16 md:py-24 px-4 md:px-8 bg-white">
       <div className="max-w-6xl mx-auto">
-        <h2 className="text-2xl md:text-3xl font-bold mb-6">
-          Why Choose <span className="text-green-800">India</span>
-          <span className="text-red-900">Job</span>
-          <span className="text-yellow-600">Support?</span>
+        <h2 className="text-2xl md:text-3xl font-bold text-slate-900 mb-8">
+          Why choose IndiaJobSupport?
         </h2>
         <ul className="">
           {whyChooseUsList.map((point, index) => (

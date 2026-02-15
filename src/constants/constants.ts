@@ -2,15 +2,15 @@ import { JobSupportPageDataProps } from '@/types/types'
 
 export const companyName = 'IndiaJobSupport'
 export const homePageMetaTitle =
-  'IndiaJobSupport - Get Job & Interview Proxy Support From India'
+  'IT Job Support for US Developers | React, Angular, Node.js & 50+ Technologies'
 export const homePageMetaDescription =
-  'IndiaJobSupport provides the best job proxy services from India with certified professionals. Get expert assistance for React, Angular, Java, .NET, Python job support, and proxy interview support.'
+  'Professional job support for US developers. Real-time help from India\'s top IT experts—React, Angular, Node.js, Python, .NET & more. 2–4 hours daily, Monday–Friday. Trusted by 1000+ developers.'
 export const homePageMetaKeywords =
-  'Online Job proxy from India, Job Proxy Services,React Job Proxy,Angular Job Proxy, Java Job Proxy, .NET Job Proxy, Python Job Proxy, Proxy Interview, Certified Professionals'
+  'job support for US developers, IT job support, React job support, Angular job support, Node.js support, remote developer support, technical job support USA'
 export const tncMetaDesc = `Read our Terms and Conditions to learn about your rights and obligations when using ${companyName} services. Find out how we protect your privacy and what you need to know before using our platform.`
 export const privacyMetaDesc = `Read our privacy policy to learn how we handle and protect your personal information while using ${companyName} website, applications, and related services.`
 export const logoPath = '/logo.png'
-export const heroImage = '/hero.jpg'
+export const heroImage = 'https://img.freepik.com/premium-photo/developers-use-augmented-reality-dashboard-icons-with-responsive-cybersecurity_27634-1551.jpg'
 export const mission = '/mission.png'
 export const easyJob = '/easyJob.png'
 export const favicon = '/favicon.png'
@@ -39,6 +39,8 @@ export const emptyDemoFormData = {
   otherTechnology: '',
   country: '',
   preferredDate: '',
+  projectDescription: '',
+  urgency: '',
 }
 
 export const emptyContactFormData = {
@@ -87,28 +89,38 @@ export const faqData = [
   {
     question: 'Do I have a choice in choosing the Job Support times?',
     answer:
-      'You can choose a time that works for both of you to schedule with your Online Job Support consultant.',
+      'Yes, absolutely! We work with your schedule. While we typically provide support during Indian business hours (IST), we can adjust to your timezone. Our standard support windows are 2–4 hours daily, Monday to Friday. You can choose the specific time slots that work best for your schedule.',
   },
   {
     question: 'Do you provide services at the end of the week?',
     answer:
-      'Weekend support is not something we typically offer, but if you are under a tight deadline, we might be able to assist you.',
+      'Generally, our support is Monday through Friday. However, we understand that deadlines don’t always respect weekends. If you have an urgent project deadline or critical issue, we can arrange weekend support on a case-by-case basis at no additional charge.',
   },
   {
     question: 'When is the most convenient time to pay for assistance?',
     answer:
-      'One demo session with our consultant is provided without charge to you. After finishing the demo and feeling at ease with our job support consultant, you can pay every 16th day since the work started.',
+      'We offer flexible payment terms. You can pay at the beginning of the month for monthly plans, or we can arrange bi-weekly or even post-service payments for established clients. We accept payments via bank transfer, PayPal, Wise, and major credit cards.',
   },
   {
     question:
       'What is the best way to contact a consultant when I need job support on a regular basis?',
     answer:
-      'You can connect using Zoom Meeting, which does not require any installation. If required, you can also use Webex based on your comfort.',
+      'Once you’re paired with a consultant, you’ll have direct communication channels including WhatsApp, Slack, or your preferred platform. We also provide email and phone support. Your consultant will share their availability schedule and emergency contact methods.',
   },
   {
     question: 'How do I make a payment?',
     answer:
-      'You can pay for support using any service like Gpay, Paytm, PhonePay, UPI, Bank Transfer (India) or PayPal (outside India).',
+      'We accept multiple payment methods for your convenience: Bank Transfer (NEFT/IMPS for India), International Wire Transfer, PayPal, Wise (formerly TransferWise), and major credit/debit cards. All payment details will be shared via secure invoice.',
+  },
+  {
+    question: 'What technologies do you support?',
+    answer:
+      'We support 50+ technologies including React, Angular, Vue, Node.js, Python, Java, .NET, PHP, DevOps tools (AWS, Azure, Docker, Kubernetes), and many more. If you don’t see your technology listed, contact us—we likely have experts available.',
+  },
+  {
+    question: "What if the consultant doesn't meet my expectations?",
+    answer:
+      "Client satisfaction is our priority. If you're not satisfied with your consultant within the first week, we'll immediately assign a different expert at no additional cost. We also offer a money-back guarantee if we cannot meet your requirements.",
   },
 ]
 

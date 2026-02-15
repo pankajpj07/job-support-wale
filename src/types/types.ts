@@ -22,6 +22,8 @@ export interface FormData {
   otherTechnology?: string
   preferredDate?: string
   query?: string
+  projectDescription?: string
+  urgency?: string
 }
 
 export interface ModalProps {

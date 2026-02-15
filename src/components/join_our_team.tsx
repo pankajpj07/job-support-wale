@@ -35,11 +35,14 @@ const JoinOurTeam = () => {
   }
 
   return (
-    <section id="join-our-team" className="pb-12 px-5 bg-gray-100 pt-24">
-      <div className="container mx-auto">
-        <h2 className="text-3xl font-bold mb-6 text-center">
-          Join Our Team Of Developers
+    <section id="join-our-team" className="pb-16 px-4 md:px-8 bg-slate-100 pt-24">
+      <div className="container mx-auto max-w-xl">
+        <h2 className="text-2xl md:text-3xl font-bold text-slate-900 mb-6 text-center">
+          Get in touch
         </h2>
+        <p className="text-slate-600 text-center mb-8">
+          Tell us your tech stack and we’ll match you with an expert within 24 hours.
+        </p>
         <form onSubmit={(e) => handleSubmit(e)} className="max-w-lg mx-auto">
           <div className="grid grid-cols-2 gap-4 mb-4 md:grid-cols-1">
             <div>
