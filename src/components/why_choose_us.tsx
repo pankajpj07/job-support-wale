@@ -4,7 +4,7 @@ import BulletPoint from './bulletpoints'
 
 const WhyChooseUsSection = () => {
   return (
-    <section className="py-16 md:py-24 px-4 md:px-8 bg-white">
+    <section className="py-8 md:py-16 px-4 md:px-8 bg-white">
       <div className="max-w-6xl mx-auto">
         <h2 className="text-2xl md:text-3xl font-bold text-slate-900 mb-8">
           Why choose IndiaJobSupport?

@@ -41,7 +41,7 @@ export default function CaseStudyPage({ caseStudy, slug }: Props) {
         canonicalPath={`/case-studies/${slug}`}
       />
       <Layout metaTitle={metaTitle} pageHref={`case-studies/${slug}`}>
-        <article className="py-16 md:py-24 px-4 md:px-8 bg-white">
+        <article className="py-8 md:py-16 px-4 md:px-8 bg-white">
           <div className="max-w-3xl mx-auto">
             <Link
               href="/case-studies"

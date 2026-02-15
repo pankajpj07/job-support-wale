@@ -4,7 +4,7 @@ import BulletPoint from './bulletpoints'
 
 const MissionSection = () => {
   return (
-    <section className="py-16 md:py-24 px-4 md:px-8 bg-white text-center">
+    <section className="py-8 md:py-16 px-4 md:px-8 bg-white text-center">
       <div className="container mx-auto flex flex-col md:flex-row items-center max-w-6xl">
         <div className="md:w-2/6 flex justify-center mb-8 md:mb-0 md:mr-8">
           <div className="w-64 h-64 md:w-80 md:h-80">

@@ -29,12 +29,12 @@ export default function ServicesLanding() {
         </Head>
 
         {/* Hero */}
-        <section className="bg-slate-900 text-white py-16 md:py-24 px-4 md:px-8">
+        <section className="bg-slate-900 text-black py-8 md:py-16 px-4 md:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
               Job support for 50+ technologies
             </h1>
-            <p className="text-lg md:text-xl text-slate-300 mb-8">
+            <p className="text-lg md:text-xl text-black-300 mb-8">
               Real-time help from India&apos;s top IT experts. Frontend, backend,
               full stack, DevOps, and .NET. Available Monday–Friday, 2–4 hours
               daily.
@@ -51,7 +51,7 @@ export default function ServicesLanding() {
         </section>
 
         {/* Tech grid */}
-        <section className="py-16 md:py-24 px-4 md:px-8 bg-white">
+        <section className="py-8 md:py-16 px-4 md:px-8 bg-white">
           <div className="max-w-6xl mx-auto">
             <h2 className="text-2xl md:text-3xl font-bold text-slate-900 mb-8 text-center">
               Technology-specific support
@@ -94,7 +94,7 @@ export default function ServicesLanding() {
         </section>
 
         {/* CTA */}
-        <section className="py-16 md:py-24 px-4 md:px-8 bg-slate-100">
+        <section className="py-8 md:py-16 px-4 md:px-8 bg-slate-100">
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="text-2xl md:text-3xl font-bold text-slate-900 mb-4">
               Not sure which technology? We’ll help you choose.
@@ -104,7 +104,9 @@ export default function ServicesLanding() {
               hours.
             </p>
             <Link
-              href="/join-our-team"
+              href="https://wa.link/zwq1xp"
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center justify-center px-8 py-4 bg-indigo-600 text-white font-semibold rounded-lg hover:bg-indigo-700 transition-colors"
             >
               Get in touch

@@ -10,7 +10,7 @@ export default function ServicePageContent({ data }: ServicePageContentProps) {
   return (
     <div className="bg-white">
       {/* Hero */}
-      <section className="bg-slate-900 text-white py-16 md:py-24 px-4 md:px-8">
+      <section className="bg-slate-900 text-black py-8 md:py-16 px-4 md:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
             {data.heroHeadline}
@@ -97,7 +97,7 @@ export default function ServicePageContent({ data }: ServicePageContentProps) {
       </section>
 
       {/* CTA */}
-      <section className="py-16 md:py-24 px-4 md:px-8 bg-primary-600 text-white">
+      <section className="py-8 md:py-16 px-4 md:px-8 bg-primary-500 text-white">
         <div className="max-w-3xl mx-auto text-center">
           <h2 className="text-2xl md:text-3xl font-bold mb-4">
             {data.ctaHeading}

@@ -3,7 +3,7 @@ import Link from 'next/link'
 
 export default function ContactCTA() {
   return (
-    <section id="join-our-team" className="py-16 md:py-24 px-4 md:px-8 bg-white">
+    <section id="join-our-team" className="py-8 md:py-16 px-4 md:px-8 bg-white">
       <div className="max-w-3xl mx-auto text-center">
         <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
           Get in touch

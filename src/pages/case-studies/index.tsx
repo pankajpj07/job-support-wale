@@ -23,7 +23,7 @@ export default function CaseStudiesIndex() {
       />
       <Layout metaTitle={caseStudiesMeta.title} pageHref="case-studies">
         {/* Hero */}
-        <section className="bg-slate-900 text-white py-16 md:py-24 px-4 md:px-8">
+        <section className="bg-slate-900 text-black py-8 md:py-16 px-4 md:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
               Success stories
@@ -36,7 +36,7 @@ export default function CaseStudiesIndex() {
         </section>
 
         {/* List */}
-        <section className="py-16 md:py-24 px-4 md:px-8 bg-white">
+        <section className="py-8 md:py-16 px-4 md:px-8 bg-white">
           <div className="max-w-4xl mx-auto space-y-12">
             {caseStudies.map((cs) => (
               <article
@@ -95,7 +95,7 @@ export default function CaseStudiesIndex() {
         </section>
 
         {/* CTA */}
-        <section className="py-16 md:py-24 px-4 md:px-8 bg-slate-100">
+        <section className="py-8 md:py-16 px-4 md:px-8 bg-slate-100">
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="text-2xl md:text-3xl font-bold text-slate-900 mb-4">
               Get the same support for your project

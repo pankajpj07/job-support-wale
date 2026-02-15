@@ -4,7 +4,7 @@ import BulletPoint from './bulletpoints'
 
 const ServicesSection = () => {
   return (
-    <section className="py-16 md:py-24 px-4 md:px-8 bg-slate-50 text-center">
+    <section className="py-8 md:py-16 px-4 md:px-8 bg-slate-50 text-center">
       <div className="max-w-6xl mx-auto">
         <h2 className="text-2xl md:text-3xl font-bold text-slate-900 mb-8 md:mb-12">Support services</h2>
         <div className="container mx-auto flex flex-col md:flex-row items-center text-left">

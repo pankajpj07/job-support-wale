@@ -67,7 +67,7 @@ export default function PricingPage() {
       />
       <Layout metaTitle={pricingMeta.title} pageHref="pricing">
         {/* Hero */}
-        <section className="bg-slate-900 text-black py-16 md:py-24 px-4 md:px-8">
+        <section className="bg-slate-900 text-black py-8 md:py-16 px-4 md:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
               Flexible plans for every need
@@ -80,7 +80,7 @@ export default function PricingPage() {
         </section>
 
         {/* Comparison table */}
-        <section className="py-16 md:py-24 px-4 md:px-8 -mt-2">
+        <section className="py-8 md:py-16 px-4 md:px-8 -mt-2">
           <div className="max-w-6xl mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
               {plans.map((plan) => (

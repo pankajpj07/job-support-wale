@@ -2,7 +2,6 @@ import React from 'react'
 import Layout from '@/components/Layout'
 import SEO from '@/components/SEO'
 import Link from 'next/link'
-import HowItWorks from '@/components/HowItWorks'
 
 const stepsDetail = [
   {
@@ -58,7 +57,7 @@ export default function HowItWorksPage() {
       />
       <Layout metaTitle={howItWorksMeta.title} pageHref="how-it-works">
         {/* Hero */}
-        <section className="bg-slate-900 text-black py-16 md:py-24 px-4 md:px-8">
+        <section className="bg-slate-900 text-black py-8 md:py-16 px-4 md:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
               How it works
@@ -71,7 +70,7 @@ export default function HowItWorksPage() {
         </section>
 
         {/* Detailed steps */}
-        <section className="py-16 md:py-24 px-4 md:px-8 bg-white">
+        <section className="py-8 md:py-16 px-4 md:px-8 bg-white">
           <div className="max-w-3xl mx-auto space-y-12">
             {stepsDetail.map((item) => (
               <div key={item.step} className="flex gap-6">
@@ -90,18 +89,8 @@ export default function HowItWorksPage() {
           </div>
         </section>
 
-        {/* Reuse homepage How it works block for consistency */}
-        <section className="bg-slate-50 py-16 md:py-24 px-4 md:px-8">
-          <div className="max-w-5xl mx-auto">
-            <h2 className="text-2xl md:text-3xl font-bold text-slate-900 text-center mb-12">
-              Summary
-            </h2>
-            <HowItWorks />
-          </div>
-        </section>
-
         {/* Communication tools */}
-        <section className="py-16 md:py-24 px-4 md:px-8 bg-white">
+        <section className="py-8 md:py-16 px-4 md:px-8 bg-white">
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="text-2xl md:text-3xl font-bold text-slate-900 mb-4">
               How we work with you
