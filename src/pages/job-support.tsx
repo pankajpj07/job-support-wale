@@ -1,12 +1,14 @@
 import Layout from '@/components/Layout'
 import JobSupportSection from '@/components/job_support_section'
-import { favicon, homePageMetaTitle } from '@/constants/constants'
+import { favicon, jobSupportPageMeta } from '@/constants/constants'
 
 const JobSupport = () => {
   return (
     <Layout
-      metaTitle={`Job Support - ${homePageMetaTitle}`}
+      metaTitle={jobSupportPageMeta.title}
       pageHref="job-support"
+      metaDescription={jobSupportPageMeta.description}
+      metaKeywords={jobSupportPageMeta.keywords}
     >
       <JobSupportSection imagePath={favicon} />
     </Layout>

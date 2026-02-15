@@ -14,7 +14,7 @@ import PricingCTA from '@/components/PricingCTA'
 import WhyChooseUsSection from '@/components/why_choose_us'
 import MetricsCard from '@/components/metrics_card'
 import Testimonials from '@/components/Testimonials'
-import { metricsData } from '@/constants/constants'
+import { metricsData, homePageMetaKeywords } from '@/constants/constants'
 import FAQ from '@/components/faq'
 import SEO from '@/components/SEO'
 import { OrganizationSchema, FAQSchema } from '@/components/StructuredData'
@@ -24,9 +24,9 @@ export default function Home() {
   return (
     <>
       <SEO
-        title="IT Job Support for US Developers | 50+ Technologies"
-        description="Professional job support from India's top IT experts. Real-time help for React, Angular, Node.js, Python & 50+ technologies. Trusted by developers in the USA."
-        keywords="job support US developers, IT job support, React job support, Angular, Node.js, Python, remote developer support"
+        title="Job Support from India | IT Job Support for US Developers – 50+ Technologies"
+        description="Get job support and job support from India. Real-time help from top IT experts for React, Angular, Node.js, Python & 50+ technologies. Trusted by developers in USA, UK, Canada."
+        keywords={homePageMetaKeywords}
         canonicalPath="/"
       />
       <Head>

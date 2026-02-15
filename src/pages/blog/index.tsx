@@ -11,6 +11,7 @@ import {
   blogCategories,
   getBlogPostsByCategory,
 } from '@/data/blogPosts'
+import { blogMetaKeywords } from '@/constants/constants'
 import type { BlogPost } from '@/types/blog'
 
 interface Props {
@@ -26,10 +27,10 @@ export default function BlogIndexPage({ posts }: Props) {
   )
 
   const metaTitle = category
-    ? `Blog: ${blogCategories.find((c) => c.slug === category)?.name ?? category} | IndiaJobSupport`
-    : 'Blog | IndiaJobSupport'
+    ? `${blogCategories.find((c) => c.slug === category)?.name ?? category} Job Support from India | Blog | IndiaJobSupport`
+    : 'Job Support Blog | Job Support from India – Guides & Tips | IndiaJobSupport'
   const metaDescription =
-    'Guides, how-tos, and insights on IT job support: React, Angular, Node.js, Python, Java, and how to choose and use job support effectively.'
+    'Guides and tips on job support and job support from India: React, Angular, Node.js, Python, Java. Learn how to choose and use IT job support effectively.'
 
   const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.indiajobsupport.in'
   return (
@@ -37,6 +38,7 @@ export default function BlogIndexPage({ posts }: Props) {
       <SEO
         title={metaTitle}
         description={metaDescription}
+        keywords={blogMetaKeywords}
         canonicalPath="/blog"
       />
       <Head>
@@ -51,10 +53,10 @@ export default function BlogIndexPage({ posts }: Props) {
         <div className="bg-white py-10 md:py-16 px-4 md:px-8">
           <div className="max-w-4xl mx-auto">
             <h1 className="text-3xl md:text-4xl font-bold text-slate-900 mb-2">
-              Blog
+              Job Support from India – Blog & Guides
             </h1>
             <p className="text-slate-600 mb-8">
-              Guides, how-tos, and insights on job support and the technologies we work with.
+              Guides and insights on job support and job support from India: React, Angular, Node.js, Python, Java, and how to choose and use IT job support effectively.
             </p>
 
             {/* Category filter */}

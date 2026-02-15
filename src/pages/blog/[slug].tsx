@@ -15,6 +15,7 @@ import {
   getAllBlogSlugs,
   blogCategories,
 } from '@/data/blogPosts'
+import { blogMetaKeywords } from '@/constants/constants'
 import type { BlogPost } from '@/types/blog'
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.indiajobsupport.in'
@@ -48,6 +49,7 @@ export default function BlogPostPage({ post, related, slug }: Props) {
       <SEO
         title={post.title}
         description={post.excerpt}
+        keywords={blogMetaKeywords}
         canonicalPath={canonicalPath}
         image={post.image}
         article

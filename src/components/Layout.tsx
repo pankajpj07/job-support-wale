@@ -9,7 +9,13 @@ import {
   homePageMetaKeywords,
 } from '@/constants/constants'
 
-const Layout = ({ metaTitle = '', pageHref = '', children }: LayoutProps) => {
+const Layout = ({
+  metaTitle = '',
+  pageHref = '',
+  metaDescription,
+  metaKeywords,
+  children,
+}: LayoutProps) => {
   return (
     <ErrorBoundary>
       <Head>
@@ -19,8 +25,8 @@ const Layout = ({ metaTitle = '', pageHref = '', children }: LayoutProps) => {
           href={`https://www.indiajobsupport.in/${pageHref}`}
           key="canonical"
         />
-        <meta name="description" content={homePageMetaDescription} />
-        <meta name="keywords" content={homePageMetaKeywords} />
+        <meta name="description" content={metaDescription ?? homePageMetaDescription} />
+        <meta name="keywords" content={metaKeywords ?? homePageMetaKeywords} />
       </Head>
       <Header />
       <main id="main-content">{children}</main>

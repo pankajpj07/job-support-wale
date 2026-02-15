@@ -13,7 +13,7 @@ export const blogPosts: BlogPost[] = [
     slug: 'complete-guide-it-job-support-services',
     title: 'Complete Guide to IT Job Support Services',
     excerpt:
-      'Everything you need to know about IT job support: what it is, who it’s for, how it works, and how to get the most from remote expert help.',
+      'Everything you need to know about IT job support and job support from India: what it is, who it’s for, how it works, and how to get the most from remote expert help.',
     category: 'guides',
     date: '2025-01-15',
     author: 'IndiaJobSupport',
@@ -24,7 +24,7 @@ export const blogPosts: BlogPost[] = [
       {
         type: 'p',
         content:
-          'IT job support is a service where experienced developers and engineers work alongside you—remotely—to help you deliver on your role. Whether you’re new to a stack, stuck on a deadline, or bridging a skills gap, the right support can keep you productive and growing.',
+          'IT job support is a service where experienced developers and engineers work alongside you—remotely—to help you deliver on your role. Whether youre new to a stack, stuck on a deadline, or bridging a skills gap, the right support can keep you productive and growing.',
       },
       {
         type: 'h2',
@@ -72,7 +72,7 @@ export const blogPosts: BlogPost[] = [
     slug: 'how-to-choose-right-job-support-provider',
     title: 'How to Choose the Right Job Support Provider',
     excerpt:
-      'Practical criteria to evaluate job support providers: expertise, process, confidentiality, and fit for your role and timeline.',
+      'Practical criteria to evaluate job support providers and job support from India: expertise, process, confidentiality, and fit for your role and timeline.',
     category: 'how-to',
     date: '2025-01-22',
     author: 'IndiaJobSupport',
@@ -131,7 +131,7 @@ export const blogPosts: BlogPost[] = [
     slug: 'react-developers-guide-to-job-support',
     title: "React Developer's Guide to Job Support",
     excerpt:
-      'Why React developers use job support, what to expect, and how to make the most of expert help on hooks, architecture, and delivery.',
+      'Why React developers use job support and job support from India, what to expect, and how to make the most of expert help on hooks, architecture, and delivery.',
     category: 'technology',
     date: '2025-02-01',
     author: 'IndiaJobSupport',
@@ -181,7 +181,7 @@ export const blogPosts: BlogPost[] = [
     slug: 'top-10-signs-you-need-job-support',
     title: 'Top 10 Signs You Need Job Support',
     excerpt:
-      'Stuck on deadlines, new tech, or unclear expectations? Here are 10 clear signs that job support could help you deliver and grow.',
+      'Stuck on deadlines, new tech, or unclear expectations? Here are 10 clear signs that job support or job support from India could help you deliver and grow.',
     category: 'career',
     date: '2025-02-08',
     author: 'IndiaJobSupport',

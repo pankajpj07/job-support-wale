@@ -6,7 +6,20 @@ export const homePageMetaTitle =
 export const homePageMetaDescription =
   'Professional job support for US developers. Real-time help from India\'s top IT experts—React, Angular, Node.js, Python, .NET & more. 2–4 hours daily, Monday–Friday. Trusted by 1000+ developers.'
 export const homePageMetaKeywords =
-  'job support for US developers, IT job support, React job support, Angular job support, Node.js support, remote developer support, technical job support USA'
+  'job support, job support from india, job support for US developers, IT job support, React job support, Angular job support, Node.js support, remote developer support, technical job support USA'
+
+/** Keywords for blog index and post pages (SEO). */
+export const blogMetaKeywords =
+  'job support, job support from india, IT job support, job support blog India, job support guides'
+
+/** Meta for /job-support page (SEO – high-impression page). */
+export const jobSupportPageMeta = {
+  title: 'Job Support | Job Support from India – All Technologies | IndiaJobSupport',
+  description:
+    'Get job support and job support from India for 50+ technologies: React, Angular, Node.js, Python, Java, .NET. Real-time help, 2–4 hours daily. Trusted by developers in USA, UK, Canada.',
+  keywords:
+    'job support, job support from india, job support india, online job support from india, IT job support, React job support, Angular, Node.js, Python',
+}
 export const tncMetaDesc = `Read our Terms and Conditions to learn about your rights and obligations when using ${companyName} services. Find out how we protect your privacy and what you need to know before using our platform.`
 export const privacyMetaDesc = `Read our privacy policy to learn how we handle and protect your personal information while using ${companyName} website, applications, and related services.`
 export const logoPath = '/logo.png'

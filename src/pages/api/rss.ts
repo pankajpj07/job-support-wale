@@ -21,9 +21,9 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   const rss = `<?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>IndiaJobSupport Blog</title>
+    <title>Job Support from India – Blog | IndiaJobSupport</title>
     <link>${SITE_URL}/blog</link>
-    <description>Guides, how-tos, and insights on IT job support: React, Angular, Node.js, Python, Java, and how to choose and use job support effectively.</description>
+    <description>Guides and tips on job support and job support from India: React, Angular, Node.js, Python, Java. Learn how to choose and use IT job support effectively.</description>
     <language>en-US</language>
     <lastBuildDate>${new Date().toUTCString()}</lastBuildDate>
     <atom:link href="${SITE_URL}/api/rss" rel="self" type="application/rss+xml"/>
