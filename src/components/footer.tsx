@@ -69,6 +69,13 @@ const Footer = () => {
                   </Link>
                 </li>
                 <li>
+                  <Link href="/blog">
+                    <span className="text-white hover:text-gray-500">
+                      Blog
+                    </span>
+                  </Link>
+                </li>
+                <li>
                   <Link href="/pricing">
                     <span className="text-white hover:text-gray-500">
                       Pricing

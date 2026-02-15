@@ -88,6 +88,9 @@ const Header = () => {
           <Link href="/about-us" className="px-3 py-2 text-slate-700 font-medium hover:text-slate-900 rounded-lg">
             About
           </Link>
+          <Link href="/blog" className="px-3 py-2 text-slate-700 font-medium hover:text-slate-900 rounded-lg">
+            Blog
+          </Link>
           <Link href="/case-studies" className="px-3 py-2 text-slate-700 font-medium hover:text-slate-900 rounded-lg">
             Case Studies
           </Link>
@@ -148,6 +151,7 @@ const Header = () => {
           <Link href="/how-it-works" className="block py-2.5 text-slate-700 font-medium" onClick={toggleMenu}>How It Works</Link>
           <Link href="/pricing" className="block py-2.5 text-slate-700 font-medium" onClick={toggleMenu}>Pricing</Link>
           <Link href="/about-us" className="block py-2.5 text-slate-700 font-medium" onClick={toggleMenu}>About</Link>
+          <Link href="/blog" className="block py-2.5 text-slate-700 font-medium" onClick={toggleMenu}>Blog</Link>
           <Link href="/case-studies" className="block py-2.5 text-slate-700 font-medium" onClick={toggleMenu}>Case Studies</Link>
           <Link href="/join-our-team" className="block py-2.5 text-slate-700 font-medium" onClick={toggleMenu}>Contact</Link>
           <button

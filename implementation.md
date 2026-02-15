@@ -2647,6 +2647,16 @@ module.exports = {
 - Content calendar for continued publishing
 - Blog optimized for SEO and sharing
 
+**Implementation (code/docs):**
+- **Blog infrastructure:** `src/pages/blog/index.tsx` (index with category filter), `src/pages/blog/[slug].tsx` (post page with Article schema, related posts, sharing, newsletter).
+- **Data:** `src/data/blogPosts.ts` – 8 posts (Complete Guide to IT Job Support, How to Choose Right Provider, React Developer’s Guide, Top 10 Signs You Need Job Support, Angular, Node.js, Python, Java). Categories: guides, how-to, technology, career, company. `src/types/blog.ts` for types.
+- **Components:** `src/components/blog/BlogPostContent.tsx`, `SocialSharingButtons.tsx` (Twitter, LinkedIn, Facebook), `NewsletterSignup.tsx`; `src/components/StructuredData.tsx` – `ArticleSchema` for blog posts.
+- **Newsletter:** `src/pages/api/newsletter.ts` (validates email; wire to Mailchimp/ConvertKit when ready).
+- **RSS:** `src/pages/api/rss.ts` – RSS 2.0 feed; blog index includes `<link rel="alternate" type="application/rss+xml">`.
+- **Nav:** Blog link added to header and footer.
+- **Content calendar:** `docs/content-calendar.md` – 3-month template and backlog ideas.
+- Posts can be expanded to meet target word counts (2,500 / 1,900 / 2,000 / 1,600) by adding more body blocks in `blogPosts.ts`.
+
 ---
 
 ### Phase 5: Link Building & Promotion (Weeks 9-10)

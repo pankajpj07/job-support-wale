@@ -94,3 +94,54 @@ export function BreadcrumbSchema({
     />
   );
 }
+
+export interface ArticleSchemaProps {
+  headline: string
+  description: string
+  datePublished: string
+  dateModified?: string
+  author: string
+  image?: string
+  url: string
+  bodyPlainText?: string
+}
+
+export function ArticleSchema({
+  headline,
+  description,
+  datePublished,
+  dateModified,
+  author,
+  image,
+  url,
+  bodyPlainText,
+}: ArticleSchemaProps) {
+  const imageUrl = image?.startsWith('http') ? image : image ? `${SITE_URL}${image}` : undefined
+  const schema = {
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    headline,
+    description,
+    datePublished,
+    dateModified: dateModified || datePublished,
+    author: {
+      '@type': 'Organization',
+      name: author,
+    },
+    publisher: {
+      '@type': 'Organization',
+      name: 'IndiaJobSupport',
+      logo: { '@type': 'ImageObject', url: `${SITE_URL}/logo.png` },
+    },
+    mainEntityOfPage: { '@type': 'WebPage', '@id': url },
+    ...(imageUrl && { image: imageUrl }),
+    ...(bodyPlainText && { articleBody: bodyPlainText }),
+  }
+
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+    />
+  )
+}
