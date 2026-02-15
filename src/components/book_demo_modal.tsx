@@ -247,10 +247,10 @@ const BookDemoModal = ({ isOpen, toggleModal }: ModalProps) => {
               <span className="block mt-1 text-sm text-slate-500">{(formData.projectDescription || '').length}/500</span>
             </div>
             <fieldset>
-              <legend className="block font-medium text-slate-700 mb-2">
+              <legend id="demo-urgency-legend" className="block font-medium text-slate-700 mb-2">
                 When do you need support? <span className="text-red-600" aria-hidden>*</span>
               </legend>
-              <div className="space-y-2" role="radiogroup" aria-required="true">
+              <div className="space-y-2" role="radiogroup" aria-labelledby="demo-urgency-legend" aria-required="true">
                 {URGENCY_OPTIONS.map((opt) => (
                   <label key={opt} className="flex items-center gap-3 cursor-pointer py-1">
                     <input

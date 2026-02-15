@@ -2,6 +2,7 @@
 const nextConfig = {
   reactStrictMode: true,
   compress: true,
+  productionBrowserSourceMaps: true,
 
   images: {
     remotePatterns: [
