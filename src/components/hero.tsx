@@ -63,7 +63,7 @@ const HeroBanner = () => {
         >
           {trustItems.map((item) => (
             <li key={item} className="flex items-center gap-2">
-              <span className="text-emerald-400 font-bold" aria-hidden>✓</span>
+              <span className="text-green-400 font-bold" aria-hidden>✓</span>
               <span>{item}</span>
             </li>
           ))}

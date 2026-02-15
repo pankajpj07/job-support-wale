@@ -17,7 +17,7 @@ export default function TrustBadges() {
               key={i}
               className="inline-flex items-center gap-2 font-medium"
             >
-              <span className="text-emerald-600" aria-hidden>
+              <span className="text-green-600" aria-hidden>
                 {b.icon}
               </span>
               {b.label}

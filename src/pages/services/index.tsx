@@ -34,15 +34,13 @@ export default function ServicesLanding() {
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
               Job support for 50+ technologies
             </h1>
-            <p className="text-lg md:text-xl text-black-300 mb-8">
+            <p className="text-lg md:text-xl text-slate-300 mb-8">
               Real-time help from India&apos;s top IT experts. Frontend, backend,
               full stack, DevOps, and .NET. Available Monday–Friday, 2–4 hours
               daily.
             </p>
             <Link
-              href="https://wa.link/zwq1xp"
-              target="_blank"
-              rel="noopener noreferrer"
+              href="/join-our-team"
               className="inline-flex items-center justify-center px-8 py-4 bg-indigo-600 text-white font-semibold rounded-lg hover:bg-indigo-500 transition-colors"
             >
               Book free consultation

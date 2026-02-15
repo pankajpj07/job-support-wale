@@ -1,8 +1,10 @@
 import React from 'react'
+import Head from 'next/head'
 import Layout from '@/components/Layout'
 import SEO from '@/components/SEO'
 import Link from 'next/link'
 import FAQ from '@/components/faq'
+import { BreadcrumbSchema } from '@/components/StructuredData'
 
 const pricingMeta = {
   title: 'Pricing | Job Support Plans – Hourly, Half-Month, Monthly',
@@ -65,16 +67,23 @@ export default function PricingPage() {
         keywords={pricingMeta.keywords}
         canonicalPath="/pricing"
       />
+      <Head>
+        <BreadcrumbSchema items={[{ name: 'Home', url: '/' }, { name: 'Pricing', url: '/pricing' }]} />
+      </Head>
       <Layout metaTitle={pricingMeta.title} pageHref="pricing">
         {/* Hero */}
-        <section className="bg-slate-900 text-black py-8 md:py-16 px-4 md:px-8">
+        <section className="bg-slate-900 text-black py-12 md:py-20 px-4 md:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
-              Flexible plans for every need
+              Flexible Job Support Pricing for Every Need
             </h1>
-            <p className="text-lg md:text-xl text-slate-300">
-              Hourly, half-month, or monthly. No long-term commitment. Free
-              consultation to find the right plan.
+            <p className="text-lg md:text-xl text-slate-300 mb-6">
+              Hourly, half-month, or monthly plans. No long-term commitment.
+              Free 15-minute consultation to find the right plan for your project.
+            </p>
+            <p className="text-slate-400 text-sm max-w-2xl mx-auto">
+              Trusted by 1,000+ developers in the USA, UK, Canada, and Australia.
+              All plans include real-time support via Zoom, Google Meet, or Teams.
             </p>
           </div>
         </section>
@@ -122,7 +131,7 @@ export default function PricingPage() {
                     className={`block w-full text-center py-3 px-4 rounded-lg font-semibold transition-colors ${
                       plan.highlighted
                         ? 'bg-primary-600 text-white hover:bg-primary-700'
-                        : 'bg-slate-900 text-white hover:bg-slate-800'
+                        : 'bg-slate-900 text-black hover:bg-slate-800'
                     }`}
                   >
                     {plan.cta}
@@ -146,6 +155,23 @@ export default function PricingPage() {
                 Contact us
               </Link>
             </div>
+            {/* <div className="mt-12 text-center">
+              <h2 className="text-xl font-bold text-slate-900 mb-4">Learn more</h2>
+              <p className="text-slate-600 mb-4">
+                See how our job support works, which technologies we cover, and stories from developers we&apos;ve helped.
+              </p>
+              <div className="flex flex-wrap justify-center gap-4">
+                <Link href="/how-it-works" className="text-primary-600 font-medium hover:underline">
+                  How it works
+                </Link>
+                <Link href="/services" className="text-primary-600 font-medium hover:underline">
+                  Technology support
+                </Link>
+                <Link href="/case-studies" className="text-primary-600 font-medium hover:underline">
+                  Case studies
+                </Link>
+              </div>
+            </div> */}
           </div>
         </section>
 

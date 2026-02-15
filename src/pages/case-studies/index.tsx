@@ -9,7 +9,7 @@ const caseStudiesMeta = {
   description:
     'Read how we helped developers deliver projects on time with React, Node.js, Angular, and more. Real success stories from our job support clients.',
   keywords:
-    'job support success stories, developer case studies, React job support results, IT support testimonials',
+    'job support success stories, developer case studies, React job support results, IT support testimonials, Node.js job support case study, Angular support results',
 }
 
 export default function CaseStudiesIndex() {
@@ -31,6 +31,15 @@ export default function CaseStudiesIndex() {
             <p className="text-lg md:text-xl text-slate-300">
               How we helped developers deliver projects on time and grow their
               skills.
+            </p>
+          </div>
+        </section>
+
+        {/* Intro for SEO */}
+        <section className="py-8 px-4 md:px-8 bg-white">
+          <div className="max-w-3xl mx-auto text-center">
+            <p className="text-slate-700 leading-relaxed">
+              These case studies show how our job support helped developers in the USA, UK, and Canada deliver React, Node.js, and Angular projects on time. Each story includes the challenge, solution, and measurable results. Explore our <Link href="/services" className="text-primary-600 font-medium hover:underline">technology-specific support</Link> or <Link href="/pricing" className="text-primary-600 font-medium hover:underline">pricing</Link> to get similar help.
             </p>
           </div>
         </section>

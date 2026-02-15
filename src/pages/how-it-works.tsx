@@ -1,7 +1,9 @@
 import React from 'react'
+import Head from 'next/head'
 import Layout from '@/components/Layout'
 import SEO from '@/components/SEO'
 import Link from 'next/link'
+import { BreadcrumbSchema } from '@/components/StructuredData'
 
 const stepsDetail = [
   {
@@ -55,6 +57,9 @@ export default function HowItWorksPage() {
         keywords={howItWorksMeta.keywords}
         canonicalPath="/how-it-works"
       />
+      <Head>
+        <BreadcrumbSchema items={[{ name: 'Home', url: '/' }, { name: 'How It Works', url: '/how-it-works' }]} />
+      </Head>
       <Layout metaTitle={howItWorksMeta.title} pageHref="how-it-works">
         {/* Hero */}
         <section className="bg-slate-900 text-black py-8 md:py-16 px-4 md:px-8">

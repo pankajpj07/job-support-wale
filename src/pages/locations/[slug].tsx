@@ -38,7 +38,7 @@ export default function LocationPage({ data, slug }: Props) {
         canonicalPath={`/locations/${slug}`}
       />
       <Layout metaTitle={data.metaTitle} pageHref={`locations/${slug}`}>
-        <section className="bg-slate-900 text-white py-8 md:py-16 px-4 md:px-8">
+        <section className="bg-slate-900 text-black py-8 md:py-16 px-4 md:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
               {data.heroHeadline}
