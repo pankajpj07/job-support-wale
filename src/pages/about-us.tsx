@@ -17,7 +17,7 @@ export default function About() {
             offering expert assistance for a wide range of technologies,
             including React, Angular, Java, .NET, Python, and more. Our mission
             is to empower individuals and organizations by providing reliable
-            job support and proxy interview support services.
+            job support services.
           </p>
           <p className="text-lg text-gray-700 mb-8">
             At IndiaJobSupport, we understand the challenges faced by
