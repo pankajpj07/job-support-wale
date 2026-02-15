@@ -1,24 +1,24 @@
 import React from 'react'
+import dynamic from 'next/dynamic'
 import Head from 'next/head'
 import Header from '../components/header'
 import Footer from '../components/footer'
 import HeroBanner from '@/components/hero'
 import TrustBadges from '@/components/TrustBadges'
 import MissionSection from '@/components/mission_section'
-import HowItWorks from '@/components/HowItWorks'
-import ServiceCardsGrid from '@/components/ServiceCardsGrid'
-import ServicesSection from '@/components/services_section'
-import WhatsAppSticky from '@/components/whatsapp_sticky'
-import ContactCTA from '@/components/ContactCTA'
-import PricingCTA from '@/components/PricingCTA'
-import WhyChooseUsSection from '@/components/why_choose_us'
-import MetricsCard from '@/components/metrics_card'
-import Testimonials from '@/components/Testimonials'
-import { metricsData, homePageMetaKeywords } from '@/constants/constants'
-import FAQ from '@/components/faq'
+import { metricsData, homePageMetaKeywords, faqData } from '@/constants/constants'
 import SEO from '@/components/SEO'
 import { OrganizationSchema, FAQSchema } from '@/components/StructuredData'
-import { faqData } from '@/constants/constants'
+import MetricsCard from '@/components/metrics_card'
+import WhatsAppSticky from '@/components/whatsapp_sticky'
+
+const HowItWorks = dynamic(() => import('@/components/HowItWorks'), { ssr: true })
+const ServiceCardsGrid = dynamic(() => import('@/components/ServiceCardsGrid'), { ssr: true })
+const ServicesSection = dynamic(() => import('@/components/services_section'), { ssr: true })
+const WhyChooseUsSection = dynamic(() => import('@/components/why_choose_us'), { ssr: true })
+const Testimonials = dynamic(() => import('@/components/Testimonials'), { ssr: true })
+const FAQ = dynamic(() => import('@/components/faq'), { ssr: true })
+const PricingCTA = dynamic(() => import('@/components/PricingCTA'), { ssr: true })
 
 export default function Home() {
   return (

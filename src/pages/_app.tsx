@@ -1,7 +1,8 @@
 import 'tailwindcss/tailwind.css'
 import Head from 'next/head'
+import Script from 'next/script'
 import { AppProps } from 'next/app'
-import * as gtag from '../lib/gtag';
+import * as gtag from '../lib/gtag'
 
 import {
   favicon,
@@ -34,27 +35,28 @@ function App({ Component, pageProps }: AppProps) {
           crossOrigin="use-credentials"
         />
         <link href={favicon} rel="icon" type="image/png" sizes="16x16" />
-        <link rel="apple-touch-icon" href="/apple-icon.png"></link>
+        <link rel="apple-touch-icon" href="/apple-icon.png" />
         <meta name="theme-color" content="#317EFB" />
+        <link rel="preconnect" href="https://www.googletagmanager.com" />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}window.gtag=gtag;`,
+          }}
+        />
       </Head>
-      <Component {...pageProps} />
-      <script
-        async
+      <Script
+        id="gtag-js"
+        strategy="afterInteractive"
         src={`https://www.googletagmanager.com/gtag/js?id=${gtag.GA_TRACKING_ID}`}
-      ></script>
-      <script
-        dangerouslySetInnerHTML={{
-          __html: `
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-
-            gtag('config', '${gtag.GA_TRACKING_ID}', {
-              page_path: window.location.pathname,
-            });
-          `,
+        onLoad={() => {
+          const w = window as unknown as { gtag?: (...a: unknown[]) => void }
+          if (typeof w.gtag === 'function') {
+            w.gtag('js', new Date())
+            w.gtag('config', gtag.GA_TRACKING_ID, { page_path: window.location.pathname })
+          }
         }}
       />
+      <Component {...pageProps} />
       <Analytics />
     </>
   )
