@@ -8,7 +8,7 @@ export const javaJobSupportData: ServicePageDataFull = {
     description:
       'Get professional Java job support from senior developers. Help with Spring Boot, microservices, JPA. 2-4 hours daily. Trusted by 400+ Java developers.',
     keywords:
-      'Java job support, Spring Boot support, Java backend, microservices Java, enterprise Java support, Spring consultant',
+      'Java job support from India, Java job support, Spring Boot support, Java backend, microservices Java, enterprise Java support, Spring consultant',
     canonicalUrl: '/services/java-job-support',
     ogImage: '/og-image.jpg',
   },

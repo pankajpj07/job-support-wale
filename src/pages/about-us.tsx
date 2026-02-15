@@ -1,4 +1,4 @@
-import { homePageMetaTitle } from '@/constants/constants'
+import { aboutPageMeta } from '@/constants/constants'
 import Layout from '@/components/Layout'
 import MissionSection from '@/components/mission_section'
 import FAQ from '@/components/faq'
@@ -6,18 +6,24 @@ import { consultantProfiles } from '@/constants/teamData'
 
 export default function About() {
   return (
-    <Layout metaTitle={`About us - ${homePageMetaTitle}`} pageHref="about-us">
+    <Layout
+      metaTitle={aboutPageMeta.title}
+      pageHref="about-us"
+      metaDescription={aboutPageMeta.description}
+      metaKeywords={aboutPageMeta.keywords}
+    >
       <div className="bg-gray-100 py-12 px-4">
         <MissionSection />
         <div className="max-w-6xl mx-auto">
           <h1 className="text-4xl font-bold text-gray-900 mb-4">About Us</h1>
           <p className="text-lg text-gray-700 mb-8">
-            IndiaJobSupport is a leading provider of online job support services
-            from India, staffed with certified professionals. We specialize in
-            offering expert assistance for a wide range of technologies,
-            including React, Angular, Java, .NET, Python, and more. Our mission
-            is to empower individuals and organizations by providing reliable
-            job support services.
+            IndiaJobSupport is a leading provider of job support services from
+            India and IT job support from India, staffed with certified
+            professionals. We offer online job support from India for a wide
+            range of technologies—including React, Angular, Java, .NET, Python,
+            DevOps, and data science—and are trusted by Indian IT professionals
+            in the USA, UK, Canada, and beyond. Our mission is to empower
+            individuals and organizations with reliable job support services.
           </p>
           <p className="text-lg text-gray-700 mb-8">
             At IndiaJobSupport, we understand the challenges faced by

@@ -30,7 +30,7 @@ export default function BlogIndexPage({ posts }: Props) {
     ? `${blogCategories.find((c) => c.slug === category)?.name ?? category} Job Support from India | Blog | IndiaJobSupport`
     : 'Job Support Blog | Job Support from India – Guides & Tips | IndiaJobSupport'
   const metaDescription =
-    'Guides and tips on job support and job support from India: React, Angular, Node.js, Python, Java. Learn how to choose and use IT job support effectively.'
+    'Guides and tips on job support, job support from India, and job support services from India: React, Angular, Node.js, Python, Java, DevOps, data science. Learn how to choose and use IT job support effectively.'
 
   const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.indiajobsupport.in'
   return (

@@ -34,7 +34,7 @@ export const servicesPageData: Record<ServiceSlug, ServicePageData> = {
     metaDescription:
       'Professional React job support from India. Get real-time help with React hooks, Redux, Next.js, and component architecture. 2–4 hours daily, Monday–Friday.',
     metaKeywords:
-      'React job support, React.js help, React hooks support, Redux support, Next.js job support, frontend developer support',
+      'React job support from India, React job support, React.js help, React hooks support, Redux support, Next.js job support, frontend developer support',
     heroHeadline: 'React Job Support from Expert Developers',
     heroSubhead:
       'Real-time help with React, hooks, Redux, Next.js, and modern frontend architecture. Pair programming and code reviews to ship on time.',
@@ -84,7 +84,7 @@ export const servicesPageData: Record<ServiceSlug, ServicePageData> = {
     metaDescription:
       'Professional Angular job support from India. Real-time help with Angular (2+), RxJS, NgRx, and enterprise frontend. 2–4 hours daily.',
     metaKeywords:
-      'Angular job support, Angular 2 support, RxJS support, NgRx, TypeScript Angular, enterprise frontend support',
+      'Angular job support from India, Angular job support, Angular 2 support, RxJS support, NgRx, TypeScript Angular, enterprise frontend support',
     heroHeadline: 'Angular Job Support from Expert Developers',
     heroSubhead:
       'Real-time help with Angular, RxJS, NgRx, services, and enterprise-scale frontend. Deliver your project on time.',
@@ -134,7 +134,7 @@ export const servicesPageData: Record<ServiceSlug, ServicePageData> = {
     metaDescription:
       'Professional Node.js job support from India. Real-time help with Express, NestJS, APIs, and backend architecture. 2–4 hours daily.',
     metaKeywords:
-      'Node.js job support, Express support, NestJS support, Node API development, backend job support',
+      'Node.js job support from India, Node.js job support, Express support, NestJS support, Node API development, backend job support',
     heroHeadline: 'Node.js Job Support from Expert Developers',
     heroSubhead:
       'Real-time help with Express, NestJS, REST/GraphQL APIs, databases, and backend architecture. Ship your backend on time.',
@@ -184,7 +184,7 @@ export const servicesPageData: Record<ServiceSlug, ServicePageData> = {
     metaDescription:
       'Professional Python job support from India. Real-time help with Django, Flask, APIs, and scripting. 2–4 hours daily.',
     metaKeywords:
-      'Python job support, Django support, Flask support, Python API, backend Python support',
+      'Python job support from India, Python job support, Django support, Flask support, Python API, backend Python support',
     heroHeadline: 'Python Job Support from Expert Developers',
     heroSubhead:
       'Real-time help with Django, Flask, FastAPI, APIs, and Python backend development. Deliver your project on time.',
@@ -234,7 +234,7 @@ export const servicesPageData: Record<ServiceSlug, ServicePageData> = {
     metaDescription:
       'Professional Java job support from India. Real-time help with Java, Spring Boot, microservices, and enterprise backend. 2–4 hours daily.',
     metaKeywords:
-      'Java job support, Spring Boot support, Java backend, microservices Java, enterprise Java support',
+      'Java job support from India, Java job support, Spring Boot support, Java backend, microservices Java, enterprise Java support',
     heroHeadline: 'Java Job Support from Expert Developers',
     heroSubhead:
       'Real-time help with Java, Spring Boot, microservices, and enterprise backend. Ship your project on time.',

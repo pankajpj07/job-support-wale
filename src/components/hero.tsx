@@ -37,9 +37,9 @@ const HeroBanner = () => {
           className="text-lg md:text-xl text-white mb-8 max-w-2xl mx-auto"
           style={{ textShadow: '0 2px 12px rgba(0,0,0,0.6), 0 0 24px rgba(0,0,0,0.4)' }}
         >
-          Real-time technical assistance for 50+ technologies. Available
-          Monday–Friday, 2–4 hours daily. Trusted by developers across the
-          USA.
+          IT job support from India and online job support from India for 50+
+          technologies. Real-time help Monday–Friday, 2–4 hours daily. Trusted by
+          developers and Indian IT professionals in the USA, UK, and Canada.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-10">
           <Link

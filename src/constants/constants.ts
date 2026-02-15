@@ -6,19 +6,28 @@ export const homePageMetaTitle =
 export const homePageMetaDescription =
   'Professional job support for US developers. Real-time help from India\'s top IT experts—React, Angular, Node.js, Python, .NET & more. 2–4 hours daily, Monday–Friday. Trusted by 1000+ developers.'
 export const homePageMetaKeywords =
-  'job support, job support from india, job support for US developers, IT job support, React job support, Angular job support, Node.js support, remote developer support, technical job support USA'
+  'job support, job support from india, job support india, job support services from india, online job support from india, IT job support from india, Java job support from india, job support for US developers, React job support, Angular job support, Node.js support, DevOps job support for Indian IT professionals in the USA, data science job support, remote developer support, technical job support USA'
 
 /** Keywords for blog index and post pages (SEO). */
 export const blogMetaKeywords =
-  'job support, job support from india, IT job support, job support blog India, job support guides'
+  'job support, job support from india, job support india, job support services from india, IT job support, job support blog India, job support guides, online job support from india'
 
 /** Meta for /job-support page (SEO – high-impression page). */
 export const jobSupportPageMeta = {
   title: 'Job Support | Job Support from India – All Technologies | IndiaJobSupport',
   description:
-    'Get job support and job support from India for 50+ technologies: React, Angular, Node.js, Python, Java, .NET. Real-time help, 2–4 hours daily. Trusted by developers in USA, UK, Canada.',
+    'Get job support and job support services from India for 50+ technologies: React, Angular, Node.js, Python, Java, .NET, DevOps. IT job support from India for Indian IT professionals in the USA. Real-time help, 2–4 hours daily.',
   keywords:
-    'job support, job support from india, job support india, online job support from india, IT job support, React job support, Angular, Node.js, Python',
+    'job support, job support from india, job support india, job support services from india, online job support from india, IT job support from india, Java job support from india, DevOps job support for Indian IT professionals in the USA, data science job support, React job support, Angular, Node.js, Python',
+}
+
+/** Meta for /about-us page (SEO). */
+export const aboutPageMeta = {
+  title: 'About Us | Job Support from India – IT Job Support for Developers',
+  description:
+    'IndiaJobSupport provides job support services from India and IT job support from India for developers worldwide. Learn about our team and how we help Indian IT professionals in the USA and beyond.',
+  keywords:
+    'about IndiaJobSupport, job support from india, job support services from india, IT job support from india, Indian IT professionals in the USA',
 }
 export const tncMetaDesc = `Read our Terms and Conditions to learn about your rights and obligations when using ${companyName} services. Find out how we protect your privacy and what you need to know before using our platform.`
 export const privacyMetaDesc = `Read our privacy policy to learn how we handle and protect your personal information while using ${companyName} website, applications, and related services.`
@@ -41,7 +50,7 @@ export const supportServices = [
   'We see your project and technologies used, if we are 100% confident then we agree to support you.',
   'We work on the Monthly basis or Half-Month basis or Hourly basis',
   'Based on your requirement we will work for 2 or 3 or 4 hours or full time on every day Monday to Friday',
-  'We provide the job support in the USA, the UK, Canada, Australia, UAE, and all other countries.',
+  'We provide job support services from India and IT job support from India in the USA, the UK, Canada, Australia, UAE, and all other countries—including for Indian IT professionals in the USA.',
   "Usually we don't work for weekends. But however if you have a deadline to finish your task No worries. We are here for you support you on weekends too.",
 ]
 export const emptyDemoFormData = {

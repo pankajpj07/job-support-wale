@@ -23,7 +23,7 @@ const JobSupportSection = ({
             </h2>
             <p className="text-xs md:text-lg">
               {skillsText ??
-                'The Job support is to provide the ability to solve complex project requirements in Real-Time for beginners in IT. Our team at IndiaJobSupport provides job support, training, and consulting for more than 50+ IT courses.'}
+                'We provide job support services from India and IT job support from India for Indian IT professionals in the USA and worldwide. Our team at IndiaJobSupport delivers job support, training, and consulting for 50+ IT courses—including Java job support from India, DevOps, and data science—so you can solve complex project requirements in real time.'}
             </p>
           </div>
           <div className="w-1/3">
