@@ -9,7 +9,7 @@ const steps = [
   },
   {
     step: 2,
-    title: 'Get matched with an expert',
+    title: 'Get an expert',
     description:
       'We assign a consultant within 24 hours. Review their profile and experience before you start.',
   },
