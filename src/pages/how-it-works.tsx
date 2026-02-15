@@ -58,7 +58,7 @@ export default function HowItWorksPage() {
       />
       <Layout metaTitle={howItWorksMeta.title} pageHref="how-it-works">
         {/* Hero */}
-        <section className="bg-slate-900 text-white py-16 md:py-24 px-4 md:px-8">
+        <section className="bg-slate-900 text-black py-16 md:py-24 px-4 md:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
               How it works
@@ -113,7 +113,9 @@ export default function HowItWorksPage() {
               share their availability and preferred contact method.
             </p>
             <Link
-              href="/join-our-team"
+              href="https://wa.link/zwq1xp"
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center justify-center px-8 py-4 bg-indigo-600 text-white font-semibold rounded-lg hover:bg-indigo-700 transition-colors"
             >
               Book free consultation

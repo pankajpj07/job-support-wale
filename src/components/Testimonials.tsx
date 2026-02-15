@@ -65,7 +65,9 @@ export default function Testimonials() {
         </div>
         <p className="text-center mt-10">
           <Link
-            href="/#join-our-team"
+            href="https://wa.link/zwq1xp"
+            target="_blank"
+            rel="noopener noreferrer"
             className="text-primary-600 font-medium hover:underline"
           >
             Join 1,000+ developers who trust us →

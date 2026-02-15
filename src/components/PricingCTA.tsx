@@ -19,7 +19,9 @@ export default function PricingCTA() {
             Get a quote
           </Link>
           <Link
-            href="/#join-our-team"
+            href="https://wa.link/zwq1xp"
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-flex items-center justify-center px-8 py-4 bg-white text-slate-700 font-semibold rounded-lg border-2 border-slate-300 hover:border-slate-400 transition-colors"
           >
             Contact us

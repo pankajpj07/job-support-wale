@@ -43,7 +43,9 @@ const HeroBanner = () => {
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-10">
           <Link
-            href="#join-our-team"
+            href="https://wa.link/zwq1xp"
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-flex items-center justify-center px-8 py-4 bg-indigo-600 text-white font-semibold rounded-lg hover:bg-indigo-500 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-slate-900 transition-colors shadow-lg min-w-[200px] min-h-[48px]"
           >
             Book free consultation
