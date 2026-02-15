@@ -1,6 +1,7 @@
 import 'tailwindcss/tailwind.css'
 import Head from 'next/head'
 import Script from 'next/script'
+import dynamic from 'next/dynamic'
 import { AppProps } from 'next/app'
 import * as gtag from '../lib/gtag'
 
@@ -10,7 +11,11 @@ import {
   homePageMetaKeywords,
   homePageMetaTitle,
 } from '../constants/constants'
-import { Analytics } from '@vercel/analytics/react'
+
+const Analytics = dynamic(
+  () => import('@vercel/analytics/react').then((mod) => ({ default: mod.Analytics })),
+  { ssr: false }
+)
 
 function App({ Component, pageProps }: AppProps) {
   return (
@@ -46,7 +51,7 @@ function App({ Component, pageProps }: AppProps) {
       </Head>
       <Script
         id="gtag-js"
-        strategy="afterInteractive"
+        strategy="lazyOnload"
         src={`https://www.googletagmanager.com/gtag/js?id=${gtag.GA_TRACKING_ID}`}
         onLoad={() => {
           const w = window as unknown as { gtag?: (...a: unknown[]) => void }
