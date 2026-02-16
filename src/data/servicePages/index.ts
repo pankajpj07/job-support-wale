@@ -48,8 +48,8 @@ export function buildServiceSchema(data: ServicePageDataFull): object {
     },
     aggregateRating: {
       '@type': 'AggregateRating',
-      ratingValue: '4.8',
-      reviewCount: '400',
+      ratingValue: '5',
+      reviewCount: '15',
       bestRating: '5',
       worstRating: '1',
     },

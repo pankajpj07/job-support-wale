@@ -623,7 +623,7 @@ export function OrganizationSchema() {
     ],
     "aggregateRating": {
       "@type": "AggregateRating",
-      "ratingValue": "4.8",
+      "ratingValue": "5",
       "reviewCount": "1000",
       "bestRating": "5",
       "worstRating": "1"
