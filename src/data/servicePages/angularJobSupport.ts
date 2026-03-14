@@ -181,7 +181,7 @@ Let us help you master Angular and deliver your project with confidence.`,
   pricing: [
     {
       name: 'Hourly Support',
-      price: '$25',
+      price: '$30',
       period: 'per hour',
       features: [
         'Pay as you go - no commitment',
@@ -195,7 +195,7 @@ Let us help you master Angular and deliver your project with confidence.`,
     },
     {
       name: 'Half-Month Support',
-      price: '$800',
+      price: '$400',
       period: 'per 2 weeks',
       features: [
         '2 hours daily support',
@@ -209,7 +209,7 @@ Let us help you master Angular and deliver your project with confidence.`,
     },
     {
       name: 'Monthly Support',
-      price: '$1,400',
+      price: '$700',
       period: 'per month',
       features: [
         '4 hours daily support',

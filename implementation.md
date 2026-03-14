@@ -337,7 +337,7 @@ Create `/team` page showing:
 Plans Overview:
 ┌─────────────────────────────────────────────────────────┐
 │  Hourly Support    │  Half-Month      │  Monthly        │
-│  $25/hour          │  $800/month      │  $1,400/month   │
+│  $30/hour          │  $400/month      │  $700/month   │
 │  - Flexible hours  │  - 2 hrs/day     │  - 4 hrs/day    │
 │  - Pay as you go   │  - 10 work days  │  - 20 work days │
 │  - No commitment   │  - Email support │  - Priority sup │

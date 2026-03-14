@@ -9,7 +9,7 @@ import { BreadcrumbSchema } from '@/components/StructuredData'
 const pricingMeta = {
   title: 'Pricing | Job Support Plans – Hourly, Half-Month, Monthly',
   description:
-    'Flexible job support pricing: $25/hour, half-month from $800, monthly from $1,400. No long-term commitment. Free consultation.',
+    'Flexible job support pricing: $30/hour, half-month from $400, monthly from $700. No long-term commitment. Free consultation.',
   keywords:
     'job support pricing, hourly job support, monthly job support, IT support cost',
 }
@@ -17,7 +17,7 @@ const pricingMeta = {
 const plans = [
   {
     name: 'Hourly Support',
-    price: '$25',
+    price: '$30',
     period: '/hour',
     tagline: 'Pay as you go',
     features: [
