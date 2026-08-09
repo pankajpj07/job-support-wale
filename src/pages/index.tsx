@@ -39,16 +39,18 @@ export default function Home() {
         <TrustBadges />
         <MissionSection />
         <WhyChooseUsSection />
-        <div className="bg-slate-100 py-12 md:py-16 px-4 md:px-8">
-          <div className="max-w-6xl mx-auto">
+        <div className="relative overflow-hidden bg-slate-50 py-12 md:py-16 px-4 md:px-8">
+          <div className="absolute inset-0 grid-bg-light opacity-70" aria-hidden />
+          <div className="relative max-w-6xl mx-auto">
             <h2 className="text-2xl md:text-3xl font-bold text-slate-900 text-center mb-8">
               Why developers choose us
             </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
               {metricsData.map((data, index) => (
                 <MetricsCard
                   key={index}
                   bgColor={data.bgColor}
+                  iconColor={data.iconColor}
                   icon={data.icon}
                   metrics={data.metrics}
                   text={data.text}

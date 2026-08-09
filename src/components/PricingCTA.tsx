@@ -3,29 +3,31 @@ import Link from 'next/link'
 
 export default function PricingCTA() {
   return (
-    <section id="pricing" className="py-8 md:py-16 px-4 md:px-8 bg-slate-100">
-      <div className="max-w-3xl mx-auto text-center">
-        <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
-          Flexible plans for every need
-        </h2>
-        <p className="text-slate-600 mb-8 max-w-xl mx-auto">
-          Hourly, half-month, or monthly support. No long-term commitment. Get a free consultation to find the right plan for you.
-        </p>
-        <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <Link
-            href="/join-our-team"
-            className="inline-flex items-center justify-center px-8 py-4 bg-indigo-600 text-white font-semibold rounded-lg hover:bg-indigo-700 transition-colors"
-          >
-            Get a quote
-          </Link>
-          <Link
-            href="https://wa.link/zwq1xp"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center justify-center px-8 py-4 bg-white text-slate-700 font-semibold rounded-lg border-2 border-slate-300 hover:border-slate-400 transition-colors"
-          >
-            Contact us
-          </Link>
+    <section id="pricing" className="px-4 md:px-8 py-8 md:py-16">
+      <div className="relative mx-auto max-w-5xl overflow-hidden rounded-3xl bg-ink-900 px-5 py-12 md:px-12 md:py-16 text-center">
+        <div className="absolute inset-0 grid-bg opacity-60" aria-hidden />
+        <div className="glow-blob left-1/4 -top-10 h-56 w-56 bg-primary-600/40" aria-hidden />
+        <div className="glow-blob right-1/4 -bottom-10 h-56 w-56 bg-accent-500/30" aria-hidden />
+        <div className="relative">
+          <h2 className="text-2xl md:text-4xl font-bold text-white mb-3 md:mb-4">
+            Flexible plans for every need
+          </h2>
+          <p className="text-slate-300 text-base mb-7 md:mb-8 max-w-xl mx-auto">
+            Hourly, half-month, or monthly support. No long-term commitment. Get a free consultation to find the right plan for you.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
+            <Link href="/join-our-team" className="glow-cta w-full sm:w-auto min-h-[52px] !px-8 !py-4">
+              Get a quote
+            </Link>
+            <Link
+              href="https://wa.link/ddu8hq"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="glow-cta-outline w-full sm:w-auto min-h-[52px] !px-8 !py-4"
+            >
+              Contact us
+            </Link>
+          </div>
         </div>
       </div>
     </section>

@@ -2,6 +2,7 @@ import React from 'react'
 import Link from 'next/link'
 import { GetStaticPaths, GetStaticProps } from 'next'
 import Head from 'next/head'
+import { ArrowLeft, Calendar, Clock, User } from 'lucide-react'
 import Layout from '@/components/Layout'
 import SEO from '@/components/SEO'
 import { ArticleSchema, BreadcrumbSchema } from '@/components/StructuredData'
@@ -32,8 +33,9 @@ export default function BlogPostPage({ post, related, slug }: Props) {
       <Layout metaTitle="Post not found" pageHref="blog">
         <div className="max-w-4xl mx-auto px-4 py-16 text-center">
           <h1 className="text-2xl font-bold text-slate-900 mb-4">Post not found</h1>
-          <Link href="/blog" className="text-indigo-600 hover:underline">
-            ← Back to blog
+          <Link href="/blog" className="group inline-flex items-center gap-1.5 text-primary-600 font-medium hover:text-primary-700">
+            <ArrowLeft className="h-4 w-4 transition-transform group-hover:-translate-x-1" aria-hidden />
+            Back to blog
           </Link>
         </div>
       </Layout>
@@ -78,32 +80,36 @@ export default function BlogPostPage({ post, related, slug }: Props) {
           <div className="max-w-3xl mx-auto">
             <Link
               href="/blog"
-              className="text-indigo-600 font-medium hover:underline mb-6 inline-block"
+              className="group inline-flex items-center gap-1.5 text-primary-600 font-medium hover:text-primary-700 mb-6"
             >
-              ← Blog
+              <ArrowLeft className="h-4 w-4 transition-transform group-hover:-translate-x-1" aria-hidden />
+              Blog
             </Link>
 
             <header className="mb-8">
-              <span className="text-sm font-medium text-indigo-600">{categoryName}</span>
+              <span className="text-sm font-medium text-primary-600">{categoryName}</span>
               <h1 className="text-3xl md:text-4xl font-bold text-slate-900 mt-1">
                 {post.title}
               </h1>
               <p className="text-slate-600 mt-3 text-lg">{post.excerpt}</p>
-              <div className="mt-4 flex flex-wrap items-center gap-3 text-sm text-slate-500">
-                <time dateTime={post.date}>
+              <div className="mt-4 flex flex-wrap items-center gap-x-4 gap-y-2 text-sm text-slate-500">
+                <time dateTime={post.date} className="inline-flex items-center gap-1.5">
+                  <Calendar className="h-4 w-4" aria-hidden />
                   {new Date(post.date).toLocaleDateString('en-US', {
                     year: 'numeric',
                     month: 'long',
                     day: 'numeric',
                   })}
                 </time>
-                <span>·</span>
-                <span>{post.readTimeMinutes} min read</span>
+                <span className="inline-flex items-center gap-1.5">
+                  <Clock className="h-4 w-4" aria-hidden />
+                  {post.readTimeMinutes} min read
+                </span>
                 {post.author && (
-                  <>
-                    <span>·</span>
-                    <span>{post.author}</span>
-                  </>
+                  <span className="inline-flex items-center gap-1.5">
+                    <User className="h-4 w-4" aria-hidden />
+                    {post.author}
+                  </span>
                 )}
               </div>
             </header>
@@ -128,7 +134,7 @@ export default function BlogPostPage({ post, related, slug }: Props) {
                     <li key={p.slug}>
                       <Link
                         href={`/blog/${p.slug}`}
-                        className="text-indigo-600 hover:underline font-medium"
+                        className="text-primary-600 hover:text-primary-700 font-medium"
                       >
                         {p.title}
                       </Link>

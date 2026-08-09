@@ -1,4 +1,5 @@
 import React from 'react'
+import { Cpu } from 'lucide-react'
 import type { TechnologyCategory } from '@/types/servicePageTypes'
 
 interface TechnologiesSectionProps {
@@ -17,14 +18,14 @@ export default function TechnologiesSection({ technologies }: TechnologiesSectio
         </p>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {technologies.map((cat, i) => (
-            <div key={i} className="bg-slate-50 rounded-xl p-6 border border-slate-100">
+            <div key={i} className="glass-card-light p-6 transition-all duration-300 hover:-translate-y-1 hover:shadow-glow-sm">
               <h3 className="text-lg font-bold text-slate-900 mb-4">
                 {cat.category}
               </h3>
               <ul className="space-y-2">
                 {cat.items.map((item, j) => (
-                  <li key={j} className="text-slate-700 flex items-center gap-2">
-                    <span className="text-primary-500">•</span>
+                  <li key={j} className="text-slate-700 flex items-center gap-2 font-mono text-sm">
+                    <Cpu className="h-4 w-4 shrink-0 text-accent-500" aria-hidden />
                     {item}
                   </li>
                 ))}

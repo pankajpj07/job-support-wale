@@ -1,16 +1,12 @@
 import { BulletPointProps } from '@/types/types'
-
-const DoubleArrowIcon = () => (
-  <svg className="w-5 h-5 mr-2 flex-shrink-0 text-black" fill="currentColor" viewBox="0 0 24 24" aria-hidden>
-    <path d="M15.5 5H11l5 7-5 7h4.5l5-7z" />
-    <path d="M8.5 5H4l5 7-5 7h4.5l5-7z" />
-  </svg>
-)
+import { Check } from 'lucide-react'
 
 const BulletPoint = ({ text }: BulletPointProps) => {
   return (
-    <li className="flex mb-5 text-sm md:text-lg ld:text-xl text-justify">
-      <DoubleArrowIcon />
+    <li className="flex items-start gap-3 mb-4 text-sm md:text-lg text-slate-700">
+      <span className="mt-0.5 flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-emerald-500 to-teal-600 text-white">
+        <Check className="h-3.5 w-3.5" aria-hidden />
+      </span>
       <span>{text}</span>
     </li>
   )

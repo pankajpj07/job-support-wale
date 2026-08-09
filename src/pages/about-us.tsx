@@ -12,11 +12,11 @@ export default function About() {
       metaDescription={aboutPageMeta.description}
       metaKeywords={aboutPageMeta.keywords}
     >
-      <div className="bg-gray-100 py-12 px-4">
+      <div className="relative bg-slate-50 py-12 md:py-16 px-4 grid-bg-light">
         <MissionSection />
         <div className="max-w-6xl mx-auto">
-          <h1 className="text-4xl font-bold text-gray-900 mb-4">About Us</h1>
-          <p className="text-lg text-gray-700 mb-8">
+          <h1 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">About Us</h1>
+          <p className="text-lg text-slate-700 mb-8">
             IndiaJobSupport is a leading provider of job support services from
             India and IT job support from India, staffed with certified
             professionals. We offer online job support from India for a wide
@@ -25,7 +25,7 @@ export default function About() {
             in the USA, UK, Canada, and beyond. Our mission is to empower
             individuals and organizations with reliable job support services.
           </p>
-          <p className="text-lg text-gray-700 mb-8">
+          <p className="text-lg text-slate-700 mb-8">
             At IndiaJobSupport, we understand the challenges faced by
             professionals in the IT industry. Whether it&apos;s a complex coding
             issue, troubleshooting a technical problem, or preparing for an
@@ -34,7 +34,7 @@ export default function About() {
             specific needs, ensuring that you receive the guidance and
             assistance required to succeed.
           </p>
-          <p className="text-lg text-gray-700 mb-8">
+          <p className="text-lg text-slate-700 mb-8">
             Our services are designed to bridge the gap between theoretical
             knowledge and real-world application. We provide practical
             solutions, best practices, and industry insights to help you excel
@@ -42,7 +42,7 @@ export default function About() {
             experience, enhance your skills, and overcome any challenges you may
             face in your projects.
           </p>
-          <p className="text-lg text-gray-700 mb-8">
+          <p className="text-lg text-slate-700 mb-8">
             Whether you&apos;re an individual looking to enhance your technical
             skills or a company in need of expert guidance, IndiaJobSupport is
             your trusted partner. Our dedicated professionals are committed to
@@ -65,7 +65,7 @@ export default function About() {
             {consultantProfiles.map((profile, i) => (
               <div
                 key={i}
-                className="bg-white rounded-xl p-6 border border-slate-200 shadow-sm"
+                className="glass-card-light p-6 transition-all duration-300 hover:-translate-y-1 hover:shadow-glow-sm"
               >
                 <div className="w-12 h-12 rounded-full bg-primary-100 text-primary-700 font-bold flex items-center justify-center text-lg mb-4">
                   {profile.name.split(' ').map((n) => n[0]).join('')}

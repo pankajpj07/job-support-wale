@@ -46,7 +46,7 @@ const JoinOurTeam = () => {
         <form onSubmit={(e) => handleSubmit(e)} className="max-w-lg mx-auto">
           <div className="grid grid-cols-2 gap-4 mb-4 md:grid-cols-1">
             <div>
-              <label htmlFor="name" className="block font-semibold mb-2">
+              <label htmlFor="name" className="block font-semibold text-slate-700 mb-2">
                 Name
               </label>
               <input
@@ -56,12 +56,12 @@ const JoinOurTeam = () => {
                 value={formData.name}
                 onChange={handleInputChange}
                 placeholder="John Doe"
-                className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="w-full px-4 py-2.5 border border-slate-300 rounded-lg bg-white transition-shadow focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-primary-500"
                 required
               />
             </div>
             <div>
-              <label htmlFor="email" className="block font-semibold mb-2">
+              <label htmlFor="email" className="block font-semibold text-slate-700 mb-2">
                 Email
               </label>
               <input
@@ -71,12 +71,12 @@ const JoinOurTeam = () => {
                 value={formData.email}
                 placeholder="johndoe@gmail.com"
                 onChange={handleInputChange}
-                className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="w-full px-4 py-2.5 border border-slate-300 rounded-lg bg-white transition-shadow focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-primary-500"
                 required
               />
             </div>
             <div>
-              <label htmlFor="country" className="block font-semibold mb-2">
+              <label htmlFor="country" className="block font-semibold text-slate-700 mb-2">
                 Country
               </label>
               <input
@@ -86,12 +86,12 @@ const JoinOurTeam = () => {
                 value={formData.country}
                 placeholder="Country"
                 onChange={handleInputChange}
-                className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="w-full px-4 py-2.5 border border-slate-300 rounded-lg bg-white transition-shadow focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-primary-500"
                 required
               />
             </div>
             <div>
-              <label htmlFor="phone" className="block font-semibold mb-2">
+              <label htmlFor="phone" className="block font-semibold text-slate-700 mb-2">
                 Phone Number
               </label>
               <input
@@ -101,12 +101,12 @@ const JoinOurTeam = () => {
                 value={formData.phone}
                 placeholder="+XX-XXXXXXXXXX"
                 onChange={handleInputChange}
-                className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="w-full px-4 py-2.5 border border-slate-300 rounded-lg bg-white transition-shadow focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-primary-500"
                 required
               />
             </div>
             <div className="col-span-2">
-              <label htmlFor="query" className="block font-semibold mb-2">
+              <label htmlFor="query" className="block font-semibold text-slate-700 mb-2">
                 Type Your Skills Below
               </label>
               <textarea
@@ -115,7 +115,7 @@ const JoinOurTeam = () => {
                 value={formData.query}
                 placeholder="I am an expert in JavaScript, ReactJs, Java"
                 onChange={handleInputChange}
-                className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="w-full px-4 py-2.5 border border-slate-300 rounded-lg bg-white transition-shadow focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-primary-500"
                 rows={4}
                 required
               />
@@ -123,7 +123,7 @@ const JoinOurTeam = () => {
           </div>
           <button
             type="submit"
-            className="w-full px-6 py-3 text-white font-semibold bg-indigo-700 hover:bg-indigo-600 rounded-md transition-colors duration-300"
+            className="w-full glow-cta"
           >
             Submit
           </button>

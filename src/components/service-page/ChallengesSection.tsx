@@ -19,10 +19,10 @@ export default function ChallengesSection({ challenges }: ChallengesSectionProps
           {challenges.map((ch, i) => (
             <article
               key={i}
-              className="bg-white rounded-xl p-6 shadow-sm border border-slate-100 hover:shadow-md hover:border-primary-100 transition-all"
+              className="glass-card-light p-6 transition-all duration-300 hover:-translate-y-1 hover:shadow-glow-sm hover:border-primary-200"
             >
               {ch.icon && (
-                <span className="text-3xl mb-4 block" aria-hidden>
+                <span className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br from-primary-500/10 to-accent-500/10 text-2xl" aria-hidden>
                   {ch.icon}
                 </span>
               )}

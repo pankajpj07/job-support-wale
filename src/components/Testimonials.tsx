@@ -1,5 +1,6 @@
 import React from 'react'
 import Link from 'next/link'
+import { Star, Quote } from 'lucide-react'
 
 const testimonials = [
   {
@@ -28,9 +29,12 @@ const testimonials = [
   },
 ]
 
+const initials = (name: string) =>
+  name.split(' ').map((p) => p[0]).join('').slice(0, 2).toUpperCase()
+
 export default function Testimonials() {
   return (
-    <section className="py-8 md:py-16 px-4 md:px-8 bg-slate-50" id="testimonials">
+    <section className="py-8 md:py-16 px-4 md:px-8 bg-white" id="testimonials">
       <div className="max-w-6xl mx-auto">
         <h2 className="text-3xl md:text-4xl font-bold text-slate-900 text-center mb-4">
           What developers say about us
@@ -42,22 +46,26 @@ export default function Testimonials() {
           {testimonials.map((t, i) => (
             <div
               key={i}
-              className="bg-white rounded-xl p-6 shadow-sm border border-slate-100 flex flex-col"
+              className="relative glass-card-light flex flex-col p-6 transition-all hover:-translate-y-1 hover:shadow-glow-sm"
             >
+              <Quote className="absolute right-5 top-5 h-8 w-8 text-primary-100" aria-hidden />
               <div className="flex gap-1 mb-4" aria-label={`${t.rating} out of 5 stars`}>
                 {Array.from({ length: t.rating }).map((_, j) => (
-                  <span key={j} className="text-amber-400" aria-hidden>
-                    ★
-                  </span>
+                  <Star key={j} className="h-4 w-4 fill-amber-400 text-amber-400" aria-hidden />
                 ))}
               </div>
               <blockquote className="text-slate-700 flex-1 mb-6 leading-relaxed">
                 &ldquo;{t.quote}&rdquo;
               </blockquote>
-              <footer className="text-sm text-slate-600">
-                <strong className="text-slate-900">{t.author}</strong>
-                <span className="block text-slate-500">
-                  {t.role}, {t.location}
+              <footer className="flex items-center gap-3 text-sm text-slate-600">
+                <span className="flex h-10 w-10 items-center justify-center rounded-full bg-gradient-to-br from-primary-500 to-accent-500 text-sm font-semibold text-white">
+                  {initials(t.author)}
+                </span>
+                <span>
+                  <strong className="block text-slate-900">{t.author}</strong>
+                  <span className="block text-slate-500">
+                    {t.role}, {t.location}
+                  </span>
                 </span>
               </footer>
             </div>
@@ -65,7 +73,7 @@ export default function Testimonials() {
         </div>
         <p className="text-center mt-10">
           <Link
-            href="https://wa.link/zwq1xp"
+            href="https://wa.link/ddu8hq"
             target="_blank"
             rel="noopener noreferrer"
             className="text-primary-600 font-medium hover:underline"

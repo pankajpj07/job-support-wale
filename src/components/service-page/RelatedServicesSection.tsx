@@ -1,5 +1,6 @@
 import React from 'react'
 import Link from 'next/link'
+import { ArrowRight } from 'lucide-react'
 import type { RelatedService } from '@/types/servicePageTypes'
 
 interface RelatedServicesSectionProps {
@@ -21,7 +22,7 @@ export default function RelatedServicesSection({ services }: RelatedServicesSect
             <Link
               key={s.link}
               href={s.link}
-              className="block p-6 bg-white rounded-xl border border-slate-200 hover:border-primary-300 hover:shadow-md transition-all group"
+              className="glass-card-light block p-6 transition-all duration-300 hover:-translate-y-1 hover:shadow-glow-sm hover:border-primary-200 group"
             >
               <h3 className="text-lg font-semibold text-slate-900 group-hover:text-primary-700 mb-2">
                 {s.name}
@@ -29,15 +30,17 @@ export default function RelatedServicesSection({ services }: RelatedServicesSect
               {s.description && (
                 <p className="text-slate-600 text-sm">{s.description}</p>
               )}
-              <span className="inline-block mt-3 text-primary-600 font-medium text-sm group-hover:underline">
-                Learn more →
+              <span className="mt-3 inline-flex items-center gap-1.5 text-primary-600 font-medium text-sm transition-transform duration-300 group-hover:translate-x-0.5">
+                Learn more
+                <ArrowRight className="h-4 w-4" aria-hidden />
               </span>
             </Link>
           ))}
         </div>
         <p className="text-center mt-8">
-          <Link href="/services" className="text-primary-600 font-medium hover:underline">
-            View all services →
+          <Link href="/services" className="inline-flex items-center gap-1.5 text-primary-600 font-medium hover:underline">
+            View all services
+            <ArrowRight className="h-4 w-4" aria-hidden />
           </Link>
         </p>
       </div>

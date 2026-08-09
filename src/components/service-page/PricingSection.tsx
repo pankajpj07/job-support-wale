@@ -1,5 +1,6 @@
 import React from 'react'
 import Link from 'next/link'
+import { Check, ArrowRight } from 'lucide-react'
 import type { PricingPlan } from '@/types/servicePageTypes'
 
 interface PricingSectionProps {
@@ -20,14 +21,14 @@ export default function PricingSection({ plans }: PricingSectionProps) {
           {plans.map((plan) => (
             <div
               key={plan.name}
-              className={`rounded-2xl border-2 p-6 md:p-8 flex flex-col ${
+              className={`glass-card-light relative p-6 md:p-8 flex flex-col transition-all duration-300 hover:-translate-y-1 hover:shadow-glow-sm ${
                 plan.popular
-                  ? 'border-primary-500 bg-primary-50/50 shadow-lg'
-                  : 'border-slate-200 bg-slate-50/50'
+                  ? '!border-accent-400 ring-2 ring-accent-400/40 shadow-glow-sm'
+                  : ''
               }`}
             >
               {plan.popular && (
-                <span className="text-xs font-semibold text-primary-700 uppercase tracking-wide mb-2">
+                <span className="mb-2 inline-flex w-fit items-center rounded-full bg-gradient-to-r from-primary-500 to-accent-500 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-white">
                   Most popular
                 </span>
               )}
@@ -45,17 +46,17 @@ export default function PricingSection({ plans }: PricingSectionProps) {
               <ul className="space-y-3 mb-8 flex-1">
                 {plan.features.map((f, i) => (
                   <li key={i} className="flex items-start gap-2 text-slate-700 text-sm">
-                    <span className="text-primary-600 mt-0.5" aria-hidden>✓</span>
+                    <Check className="mt-0.5 h-4 w-4 shrink-0 text-accent-500" aria-hidden />
                     {f}
                   </li>
                 ))}
               </ul>
               <Link
                 href="/join-our-team"
-                className={`block w-full text-center py-3 px-4 rounded-lg font-semibold transition-colors ${
+                className={`block w-full text-center py-3 px-4 rounded-xl font-semibold transition-all duration-300 ${
                   plan.popular
-                    ? 'bg-primary-600 text-white hover:bg-primary-700'
-                    : 'bg-slate-800 text-white hover:bg-slate-700'
+                    ? 'bg-gradient-to-r from-primary-500 to-accent-500 text-white shadow-glow-sm hover:shadow-glow hover:-translate-y-0.5'
+                    : 'bg-ink-900 text-white hover:bg-ink-800'
                 }`}
               >
                 {plan.cta}
@@ -64,8 +65,9 @@ export default function PricingSection({ plans }: PricingSectionProps) {
           ))}
         </div>
         <p className="text-center mt-8">
-          <Link href="/pricing" className="text-primary-600 font-medium hover:underline">
-            View full pricing details →
+          <Link href="/pricing" className="inline-flex items-center gap-1.5 text-primary-600 font-medium hover:underline">
+            View full pricing details
+            <ArrowRight className="h-4 w-4" aria-hidden />
           </Link>
         </p>
       </div>

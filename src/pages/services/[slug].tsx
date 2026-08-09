@@ -2,6 +2,7 @@ import React from 'react'
 import Link from 'next/link'
 import { GetStaticPaths, GetStaticProps } from 'next'
 import Head from 'next/head'
+import { ArrowRight } from 'lucide-react'
 import Layout from '@/components/Layout'
 import SEO from '@/components/SEO'
 import ServicePageContent from '@/components/ServicePageContent'
@@ -25,12 +26,16 @@ export default function ServiceTechnologyPage({ data, dataFull, slug }: Props) {
   if (!data && !dataFull) {
     return (
       <Layout metaTitle="Service not found" pageHref="services">
-        <div className="max-w-4xl mx-auto px-4 py-16 text-center">
-          <h1 className="text-2xl font-bold text-slate-900 mb-4">
+        <div className="max-w-4xl mx-auto px-4 py-16 md:py-24 text-center">
+          <h1 className="text-2xl md:text-3xl font-bold text-slate-900 mb-4">
             Service not found
           </h1>
-          <Link href="/services" className="text-primary-600 hover:underline">
+          <Link
+            href="/services"
+            className="inline-flex items-center gap-1 text-primary-600 font-medium hover:underline"
+          >
             View all services
+            <ArrowRight className="h-4 w-4" aria-hidden />
           </Link>
         </div>
       </Layout>

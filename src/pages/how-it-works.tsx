@@ -3,6 +3,7 @@ import Head from 'next/head'
 import Layout from '@/components/Layout'
 import SEO from '@/components/SEO'
 import Link from 'next/link'
+import { ArrowRight } from 'lucide-react'
 import { BreadcrumbSchema } from '@/components/StructuredData'
 
 const stepsDetail = [
@@ -62,9 +63,18 @@ export default function HowItWorksPage() {
       </Head>
       <Layout metaTitle={howItWorksMeta.title} pageHref="how-it-works">
         {/* Hero */}
-        <section className="bg-slate-900 text-black py-8 md:py-16 px-4 md:px-8">
-          <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
+        <section className="relative overflow-hidden bg-ink-900 py-14 md:py-20 px-4 md:px-8">
+          <div className="absolute inset-0 grid-bg opacity-70" aria-hidden />
+          <div
+            className="glow-blob left-1/4 top-10 h-72 w-72 bg-primary-600/40 animate-float"
+            aria-hidden
+          />
+          <div
+            className="glow-blob right-1/4 bottom-10 h-80 w-80 bg-accent-500/30 animate-float-slow"
+            aria-hidden
+          />
+          <div className="relative z-10 max-w-4xl mx-auto text-center">
+            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 text-white">
               How it works
             </h1>
             <p className="text-lg md:text-xl text-slate-300">
@@ -79,7 +89,7 @@ export default function HowItWorksPage() {
           <div className="max-w-3xl mx-auto space-y-12">
             {stepsDetail.map((item) => (
               <div key={item.step} className="flex gap-6">
-                <div className="flex-shrink-0 w-12 h-12 rounded-full bg-primary-600 text-white font-bold flex items-center justify-center text-lg">
+                <div className="flex-shrink-0 w-12 h-12 rounded-full bg-gradient-to-br from-primary-500 to-accent-500 text-white font-bold flex items-center justify-center text-lg shadow-glow-sm">
                   {item.step}
                 </div>
                 <div>
@@ -107,12 +117,13 @@ export default function HowItWorksPage() {
               share their availability and preferred contact method.
             </p>
             <Link
-              href="https://wa.link/zwq1xp"
+              href="https://wa.link/ddu8hq"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center px-8 py-4 bg-indigo-600 text-white font-semibold rounded-lg hover:bg-indigo-700 transition-colors"
+              className="glow-cta !px-8 !py-4"
             >
               Book free consultation
+              <ArrowRight className="h-5 w-5" aria-hidden />
             </Link>
           </div>
         </section>

@@ -1,4 +1,5 @@
 import React from 'react'
+import { Star, Quote } from 'lucide-react'
 import type { Testimonial } from '@/types/servicePageTypes'
 
 interface TestimonialsSectionProps {
@@ -19,21 +20,30 @@ export default function TestimonialsSection({ testimonials }: TestimonialsSectio
           {testimonials.map((t, i) => (
             <blockquote
               key={i}
-              className="bg-white rounded-xl p-6 shadow-sm border border-slate-100 flex flex-col"
+              className="glass-card-light relative p-6 flex flex-col transition-all duration-300 hover:-translate-y-1 hover:shadow-glow-sm"
             >
+              <Quote className="absolute right-6 top-6 h-8 w-8 text-primary-200" aria-hidden />
               <div className="flex gap-1 mb-4" aria-label={`${t.rating} out of 5 stars`}>
                 {Array.from({ length: t.rating }).map((_, j) => (
-                  <span key={j} className="text-amber-400" aria-hidden>★</span>
+                  <Star key={j} className="h-5 w-5 fill-amber-400 text-amber-400" aria-hidden />
                 ))}
               </div>
               <p className="text-slate-700 flex-1 leading-relaxed mb-6">
                 &ldquo;{t.text}&rdquo;
               </p>
-              <footer>
-                <strong className="text-slate-900">{t.name}</strong>
-                <span className="block text-sm text-slate-500">
-                  {t.role}
-                  {t.company && `, ${t.company}`}
+              <footer className="flex items-center gap-3">
+                <span
+                  className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-primary-500 to-accent-500 text-sm font-bold text-white"
+                  aria-hidden
+                >
+                  {t.name.charAt(0)}
+                </span>
+                <span>
+                  <strong className="text-slate-900">{t.name}</strong>
+                  <span className="block text-sm text-slate-500">
+                    {t.role}
+                    {t.company && `, ${t.company}`}
+                  </span>
                 </span>
               </footer>
             </blockquote>

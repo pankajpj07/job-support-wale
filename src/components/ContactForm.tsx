@@ -45,7 +45,7 @@ export default function ContactForm() {
   }
 
   const inputClass = (name: string) =>
-    `w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent min-h-[44px] ${
+    `w-full px-4 py-3 border rounded-lg bg-white transition-shadow focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent min-h-[44px] ${
       touched[name] && !formData[name as keyof FormData] ? 'border-red-300' : 'border-slate-300'
     }`
 
@@ -142,7 +142,7 @@ export default function ContactForm() {
       <button
         type="submit"
         disabled={isSubmitting}
-        className="w-full py-3 px-6 bg-indigo-600 text-white font-semibold rounded-lg hover:bg-indigo-700 disabled:opacity-60 disabled:cursor-not-allowed transition-colors"
+        className="w-full glow-cta disabled:opacity-60 disabled:cursor-not-allowed"
       >
         {isSubmitting ? 'Sending…' : 'Submit'}
       </button>

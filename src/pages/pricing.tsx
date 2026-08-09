@@ -4,6 +4,7 @@ import Layout from '@/components/Layout'
 import SEO from '@/components/SEO'
 import Link from 'next/link'
 import FAQ from '@/components/faq'
+import { Check, ArrowRight } from 'lucide-react'
 import { BreadcrumbSchema } from '@/components/StructuredData'
 
 const pricingMeta = {
@@ -72,9 +73,18 @@ export default function PricingPage() {
       </Head>
       <Layout metaTitle={pricingMeta.title} pageHref="pricing">
         {/* Hero */}
-        <section className="bg-slate-900 text-black py-12 md:py-20 px-4 md:px-8">
-          <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
+        <section className="relative overflow-hidden bg-ink-900 py-12 md:py-20 px-4 md:px-8">
+          <div className="absolute inset-0 grid-bg opacity-70" aria-hidden />
+          <div
+            className="glow-blob left-1/4 top-10 h-72 w-72 bg-primary-600/40 animate-float"
+            aria-hidden
+          />
+          <div
+            className="glow-blob right-1/4 bottom-10 h-80 w-80 bg-accent-500/30 animate-float-slow"
+            aria-hidden
+          />
+          <div className="relative z-10 max-w-4xl mx-auto text-center">
+            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 text-white">
               Flexible Job Support Pricing for Every Need
             </h1>
             <p className="text-lg md:text-xl text-slate-300 mb-6">
@@ -95,10 +105,10 @@ export default function PricingPage() {
               {plans.map((plan) => (
                 <div
                   key={plan.name}
-                  className={`rounded-2xl border-2 p-6 md:p-8 flex flex-col ${
+                  className={`rounded-2xl border-2 p-6 md:p-8 flex flex-col transition-all duration-300 hover:-translate-y-1 ${
                     plan.highlighted
-                      ? 'border-primary-500 bg-primary-50/50 shadow-lg scale-105 md:scale-105'
-                      : 'border-slate-200 bg-white'
+                      ? 'border-primary-500 bg-primary-50/60 shadow-glow-sm scale-105 md:scale-105 hover:shadow-glow'
+                      : 'border-slate-200 bg-white/70 backdrop-blur-md hover:shadow-glow-sm'
                   }`}
                 >
                   {plan.highlighted && (
@@ -119,19 +129,20 @@ export default function PricingPage() {
                   <ul className="space-y-3 mb-8 flex-1">
                     {plan.features.map((f) => (
                       <li key={f} className="flex items-start gap-2 text-slate-700">
-                        <span className="text-primary-600 mt-0.5" aria-hidden>
-                          ✓
-                        </span>
+                        <Check
+                          className="h-5 w-5 flex-shrink-0 text-accent-500 mt-0.5"
+                          aria-hidden
+                        />
                         {f}
                       </li>
                     ))}
                   </ul>
                   <Link
                     href="/join-our-team"
-                    className={`block w-full text-center py-3 px-4 rounded-lg font-semibold transition-colors ${
+                    className={`w-full text-center py-3 px-4 rounded-xl font-semibold transition-all duration-300 ${
                       plan.highlighted
-                        ? 'bg-primary-600 text-white hover:bg-primary-700'
-                        : 'bg-slate-900 text-black hover:bg-slate-800'
+                        ? 'glow-cta !flex'
+                        : 'block bg-ink-900 text-white hover:bg-ink-800 hover:-translate-y-0.5'
                     }`}
                   >
                     {plan.cta}
@@ -140,7 +151,7 @@ export default function PricingPage() {
               ))}
             </div>
 
-            <div className="mt-16 p-6 md:p-8 rounded-2xl border border-slate-200 bg-slate-50 max-w-3xl mx-auto text-center">
+            <div className="mt-16 glass-card-light p-6 md:p-8 max-w-3xl mx-auto text-center transition-all duration-300 hover:shadow-glow-sm">
               <h3 className="text-xl font-bold text-slate-900 mb-2">
                 Custom plans for your needs
               </h3>
@@ -150,9 +161,10 @@ export default function PricingPage() {
               </p>
               <Link
                 href="/join-our-team"
-                className="inline-flex items-center justify-center px-6 py-3 bg-green-800 text-white font-semibold rounded-lg hover:bg-slate-700 transition-colors"
+                className="glow-cta !px-8 !py-3"
               >
                 Contact us
+                <ArrowRight className="h-5 w-5" aria-hidden />
               </Link>
             </div>
             {/* <div className="mt-12 text-center">

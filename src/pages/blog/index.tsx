@@ -3,6 +3,7 @@ import Link from 'next/link'
 import Head from 'next/head'
 import { useRouter } from 'next/router'
 import { GetStaticProps } from 'next'
+import { Calendar, Clock } from 'lucide-react'
 import Layout from '@/components/Layout'
 import SEO from '@/components/SEO'
 import NewsletterSignup from '@/components/blog/NewsletterSignup'
@@ -50,23 +51,31 @@ export default function BlogIndexPage({ posts }: Props) {
         />
       </Head>
       <Layout metaTitle={metaTitle} pageHref="blog">
-        <div className="bg-white py-10 md:py-16 px-4 md:px-8">
-          <div className="max-w-4xl mx-auto">
-            <h1 className="text-3xl md:text-4xl font-bold text-slate-900 mb-2">
+        {/* Hero */}
+        <section className="relative overflow-hidden bg-ink-900 py-14 md:py-20 px-4 md:px-8">
+          <div className="absolute inset-0 grid-bg opacity-70" aria-hidden />
+          <div className="glow-blob left-1/4 top-6 h-72 w-72 bg-primary-600/40 animate-float" aria-hidden />
+          <div className="glow-blob right-1/5 bottom-0 h-56 w-56 bg-accent-400/20 animate-float-slow" aria-hidden />
+          <div className="relative z-10 max-w-4xl mx-auto">
+            <h1 className="text-3xl md:text-4xl font-bold text-white mb-2">
               Job Support from India – Blog & Guides
             </h1>
-            <p className="text-slate-600 mb-8">
+            <p className="text-slate-300">
               Guides and insights on job support and job support from India: React, Angular, Node.js, Python, Java, and how to choose and use IT job support effectively.
             </p>
+          </div>
+        </section>
 
+        <div className="bg-white py-10 md:py-16 px-4 md:px-8">
+          <div className="max-w-4xl mx-auto">
             {/* Category filter */}
             <nav className="flex flex-wrap gap-2 mb-10" aria-label="Blog categories">
               <Link
                 href="/blog"
                 className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
                   !category
-                    ? 'bg-indigo-600 text-white'
-                    : 'bg-slate-100 text-slate-700 hover:bg-slate-200'
+                    ? 'bg-primary-600 text-white shadow-glow-sm'
+                    : 'glass-card-light text-slate-700 hover:text-primary-700'
                 }`}
               >
                 All
@@ -77,8 +86,8 @@ export default function BlogIndexPage({ posts }: Props) {
                   href={`/blog?category=${c.slug}`}
                   className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
                     category === c.slug
-                  ? 'bg-indigo-600 text-white'
-                  : 'bg-slate-100 text-slate-700 hover:bg-slate-200'
+                  ? 'bg-primary-600 text-white shadow-glow-sm'
+                  : 'glass-card-light text-slate-700 hover:text-primary-700'
                 }`}
               >
                 {c.name}
@@ -87,26 +96,31 @@ export default function BlogIndexPage({ posts }: Props) {
           </nav>
 
           {/* Post list */}
-          <ul className="space-y-8">
+          <ul className="grid gap-6 sm:grid-cols-2">
             {filteredPosts.map((post) => (
-              <li key={post.slug} className="border-b border-slate-200 pb-8 last:border-0">
-                <article>
-                  <Link href={`/blog/${post.slug}`} className="group block">
-                    <span className="text-sm font-medium text-indigo-600">
+              <li key={post.slug}>
+                <article className="h-full">
+                  <Link href={`/blog/${post.slug}`} className="group glass-card-light flex h-full flex-col p-6 transition-all duration-300 hover:-translate-y-1 hover:shadow-glow-sm">
+                    <span className="text-sm font-medium text-primary-600">
                       {blogCategories.find((c) => c.slug === post.category)?.name ?? post.category}
                     </span>
-                    <h2 className="text-xl md:text-2xl font-semibold text-slate-900 mt-1 group-hover:text-indigo-600 transition-colors">
+                    <h2 className="text-xl md:text-2xl font-semibold text-slate-900 mt-1 group-hover:text-primary-600 transition-colors">
                       {post.title}
                     </h2>
                     <p className="text-slate-600 mt-2 line-clamp-2">{post.excerpt}</p>
-                    <span className="mt-2 inline-block text-sm text-slate-500">
-                      {new Date(post.date).toLocaleDateString('en-US', {
-                        year: 'numeric',
-                        month: 'long',
-                        day: 'numeric',
-                      })}
-                      {' · '}
-                      {post.readTimeMinutes} min read
+                    <span className="mt-4 inline-flex flex-wrap items-center gap-x-3 gap-y-1 text-sm text-slate-500">
+                      <span className="inline-flex items-center gap-1.5">
+                        <Calendar className="h-4 w-4" aria-hidden />
+                        {new Date(post.date).toLocaleDateString('en-US', {
+                          year: 'numeric',
+                          month: 'long',
+                          day: 'numeric',
+                        })}
+                      </span>
+                      <span className="inline-flex items-center gap-1.5">
+                        <Clock className="h-4 w-4" aria-hidden />
+                        {post.readTimeMinutes} min read
+                      </span>
                     </span>
                   </Link>
                 </article>

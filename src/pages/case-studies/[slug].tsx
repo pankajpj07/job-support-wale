@@ -3,6 +3,7 @@ import { GetStaticPaths, GetStaticProps } from 'next'
 import Layout from '@/components/Layout'
 import SEO from '@/components/SEO'
 import Link from 'next/link'
+import { ArrowLeft, Target, CheckCircle2, TrendingUp } from 'lucide-react'
 import {
   caseStudies,
   getCaseStudyBySlug,
@@ -45,37 +46,47 @@ export default function CaseStudyPage({ caseStudy, slug }: Props) {
           <div className="max-w-3xl mx-auto">
             <Link
               href="/case-studies"
-              className="text-primary-600 font-medium hover:underline mb-6 inline-block"
+              className="group inline-flex items-center gap-1.5 text-primary-600 font-medium hover:text-primary-700 mb-6"
             >
-              ← All case studies
+              <ArrowLeft className="h-4 w-4 transition-transform group-hover:-translate-x-1" aria-hidden />
+              All case studies
             </Link>
             <h1 className="text-3xl md:text-4xl font-bold text-slate-900 mb-6">
               {caseStudy.title}
             </h1>
             <div className="space-y-8 text-slate-700">
               <section>
-                <h2 className="text-xl font-semibold text-slate-900 mb-2">
+                <h2 className="flex items-center gap-2 text-xl font-semibold text-slate-900 mb-2">
+                  <Target className="h-5 w-5 text-primary-600" aria-hidden />
                   Challenge
                 </h2>
                 <p className="leading-relaxed">{caseStudy.challenge}</p>
               </section>
               <section>
-                <h2 className="text-xl font-semibold text-slate-900 mb-2">
+                <h2 className="flex items-center gap-2 text-xl font-semibold text-slate-900 mb-2">
+                  <CheckCircle2 className="h-5 w-5 text-primary-600" aria-hidden />
                   Solution
                 </h2>
-                <ul className="list-disc list-inside space-y-2">
+                <ul className="space-y-2">
                   {caseStudy.solution.map((s, i) => (
-                    <li key={i}>{s}</li>
+                    <li key={i} className="flex gap-2">
+                      <CheckCircle2 className="mt-1 h-4 w-4 flex-shrink-0 text-accent-500" aria-hidden />
+                      <span>{s}</span>
+                    </li>
                   ))}
                 </ul>
               </section>
               <section>
-                <h2 className="text-xl font-semibold text-slate-900 mb-2">
+                <h2 className="flex items-center gap-2 text-xl font-semibold text-slate-900 mb-2">
+                  <TrendingUp className="h-5 w-5 text-primary-600" aria-hidden />
                   Results
                 </h2>
-                <ul className="list-disc list-inside space-y-2">
+                <ul className="space-y-2">
                   {caseStudy.results.map((r, i) => (
-                    <li key={i}>{r}</li>
+                    <li key={i} className="flex gap-2">
+                      <TrendingUp className="mt-1 h-4 w-4 flex-shrink-0 text-accent-500" aria-hidden />
+                      <span>{r}</span>
+                    </li>
                   ))}
                 </ul>
               </section>
@@ -93,7 +104,7 @@ export default function CaseStudyPage({ caseStudy, slug }: Props) {
             <div className="mt-10">
               <Link
                 href="/join-our-team"
-                className="inline-flex items-center justify-center px-8 py-4 bg-indigo-600 text-white font-semibold rounded-lg hover:bg-indigo-700 transition-colors"
+                className="glow-cta !px-8 !py-4"
               >
                 Get similar support
               </Link>

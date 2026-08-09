@@ -38,6 +38,7 @@ export enum formType {
 
 export interface MetricsCardProps {
   bgColor: string
+  iconColor: string
   icon: any
   metrics: string
   text: string
@@ -51,7 +52,7 @@ export interface LayoutProps {
   children: ReactNode
 }
 export interface JobSupportSectionProps {
-  imagePath: string
+  imagePath?: string
   skills?: string
   skillsText?: string
   skillsServiceText?: string

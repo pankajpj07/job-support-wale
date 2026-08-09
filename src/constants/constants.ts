@@ -1,4 +1,5 @@
 import { JobSupportPageDataProps } from '@/types/types'
+import { Users, Timer, ThumbsUp, Globe } from 'lucide-react'
 
 export const companyName = 'IndiaJobSupport'
 export const homePageMetaTitle =
@@ -32,9 +33,6 @@ export const aboutPageMeta = {
 export const tncMetaDesc = `Read our Terms and Conditions to learn about your rights and obligations when using ${companyName} services. Find out how we protect your privacy and what you need to know before using our platform.`
 export const privacyMetaDesc = `Read our privacy policy to learn how we handle and protect your personal information while using ${companyName} website, applications, and related services.`
 export const logoPath = '/logo.png'
-export const heroImage = 'https://img.freepik.com/premium-photo/developers-use-augmented-reality-dashboard-icons-with-responsive-cybersecurity_27634-1551.jpg'
-export const mission = '/mission.png'
-export const easyJob = '/easyJob.png'
 export const favicon = '/favicon.png'
 export const WhatsAppIcon = '/whatsapp-icon.svg'
 export const AboutTitle = 'The Best YouTube Video Downloader'
@@ -75,26 +73,30 @@ export const emptyContactFormData = {
 
 export const metricsData = [
   {
-    bgColor: 'bg-pink-100',
-    icon: '😊',
+    bgColor: 'bg-rose-100',
+    iconColor: 'text-rose-600',
+    icon: Users,
     metrics: '1000+',
     text: 'Happy clients',
   },
   {
-    bgColor: 'bg-green-100',
-    icon: '⏲',
+    bgColor: 'bg-emerald-100',
+    iconColor: 'text-emerald-600',
+    icon: Timer,
     metrics: '24/7',
     text: 'Availability Time',
   },
   {
-    bgColor: 'bg-red-100',
-    icon: '👍',
+    bgColor: 'bg-sky-100',
+    iconColor: 'text-sky-600',
+    icon: ThumbsUp,
     metrics: '100%',
     text: 'Resource Availability',
   },
   {
-    bgColor: 'bg-yellow-100',
-    icon: '🌏',
+    bgColor: 'bg-amber-100',
+    iconColor: 'text-amber-600',
+    icon: Globe,
     metrics: '4+',
     text: 'Countries',
   },

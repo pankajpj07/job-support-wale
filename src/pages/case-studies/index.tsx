@@ -2,6 +2,7 @@ import React from 'react'
 import Layout from '@/components/Layout'
 import SEO from '@/components/SEO'
 import Link from 'next/link'
+import { ArrowRight, Target, CheckCircle2, TrendingUp } from 'lucide-react'
 import { caseStudies } from '@/constants/caseStudiesData'
 
 const caseStudiesMeta = {
@@ -23,8 +24,11 @@ export default function CaseStudiesIndex() {
       />
       <Layout metaTitle={caseStudiesMeta.title} pageHref="case-studies">
         {/* Hero */}
-        <section className="bg-slate-900 text-black py-8 md:py-16 px-4 md:px-8">
-          <div className="max-w-4xl mx-auto text-center">
+        <section className="relative overflow-hidden bg-ink-900 py-14 md:py-24 px-4 md:px-8">
+          <div className="absolute inset-0 grid-bg opacity-70" aria-hidden />
+          <div className="glow-blob left-1/4 top-8 h-72 w-72 bg-primary-600/40 animate-float" aria-hidden />
+          <div className="glow-blob right-1/4 bottom-0 h-64 w-64 bg-accent-400/20 animate-float-slow" aria-hidden />
+          <div className="relative z-10 max-w-4xl mx-auto text-center text-white">
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
               Success stories
             </h1>
@@ -46,39 +50,48 @@ export default function CaseStudiesIndex() {
 
         {/* List */}
         <section className="py-8 md:py-16 px-4 md:px-8 bg-white">
-          <div className="max-w-4xl mx-auto space-y-12">
+          <div className="max-w-4xl mx-auto space-y-8">
             {caseStudies.map((cs) => (
               <article
                 key={cs.slug}
-                className="border border-slate-200 rounded-xl p-6 md:p-8 hover:border-primary-200 transition-colors"
+                className="glass-card-light p-6 md:p-8 transition-all duration-300 hover:-translate-y-1 hover:shadow-glow-sm"
               >
                 <h2 className="text-xl md:text-2xl font-bold text-slate-900 mb-4">
                   {cs.title}
                 </h2>
                 <div className="space-y-4 text-slate-700">
                   <div>
-                    <h3 className="font-semibold text-slate-900 mb-1">
+                    <h3 className="flex items-center gap-2 font-semibold text-slate-900 mb-1">
+                      <Target className="h-4 w-4 text-primary-600" aria-hidden />
                       Challenge
                     </h3>
                     <p>{cs.challenge}</p>
                   </div>
                   <div>
-                    <h3 className="font-semibold text-slate-900 mb-1">
+                    <h3 className="flex items-center gap-2 font-semibold text-slate-900 mb-1">
+                      <CheckCircle2 className="h-4 w-4 text-primary-600" aria-hidden />
                       Solution
                     </h3>
-                    <ul className="list-disc list-inside space-y-1">
+                    <ul className="space-y-1">
                       {cs.solution.map((s, i) => (
-                        <li key={i}>{s}</li>
+                        <li key={i} className="flex gap-2">
+                          <CheckCircle2 className="mt-1 h-4 w-4 flex-shrink-0 text-accent-500" aria-hidden />
+                          <span>{s}</span>
+                        </li>
                       ))}
                     </ul>
                   </div>
                   <div>
-                    <h3 className="font-semibold text-slate-900 mb-1">
+                    <h3 className="flex items-center gap-2 font-semibold text-slate-900 mb-1">
+                      <TrendingUp className="h-4 w-4 text-primary-600" aria-hidden />
                       Results
                     </h3>
-                    <ul className="list-disc list-inside space-y-1">
+                    <ul className="space-y-1">
                       {cs.results.map((r, i) => (
-                        <li key={i}>{r}</li>
+                        <li key={i} className="flex gap-2">
+                          <TrendingUp className="mt-1 h-4 w-4 flex-shrink-0 text-accent-500" aria-hidden />
+                          <span>{r}</span>
+                        </li>
                       ))}
                     </ul>
                   </div>
@@ -94,9 +107,10 @@ export default function CaseStudiesIndex() {
                 </div>
                 <Link
                   href={`/case-studies/${cs.slug}`}
-                  className="inline-block mt-4 text-primary-600 font-medium hover:underline"
+                  className="group mt-4 inline-flex items-center gap-1.5 text-primary-600 font-medium hover:text-primary-700"
                 >
-                  Read full case study →
+                  Read full case study
+                  <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" aria-hidden />
                 </Link>
               </article>
             ))}
@@ -104,18 +118,20 @@ export default function CaseStudiesIndex() {
         </section>
 
         {/* CTA */}
-        <section className="py-8 md:py-16 px-4 md:px-8 bg-slate-100">
-          <div className="max-w-3xl mx-auto text-center">
-            <h2 className="text-2xl md:text-3xl font-bold text-slate-900 mb-4">
+        <section className="relative overflow-hidden bg-ink-900 py-14 md:py-20 px-4 md:px-8">
+          <div className="absolute inset-0 grid-bg opacity-70" aria-hidden />
+          <div className="glow-blob left-1/3 top-0 h-64 w-64 bg-primary-600/40 animate-float" aria-hidden />
+          <div className="relative z-10 max-w-3xl mx-auto text-center">
+            <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">
               Get the same support for your project
             </h2>
-            <p className="text-slate-600 mb-8">
+            <p className="text-slate-300 mb-8">
               Free 15-minute consultation. Matched with an expert within 24
               hours.
             </p>
             <Link
               href="/join-our-team"
-              className="inline-flex items-center justify-center px-8 py-4 bg-indigo-600 text-white font-semibold rounded-lg hover:bg-indigo-700 transition-colors"
+              className="glow-cta !px-8 !py-4"
             >
               Book free consultation
             </Link>

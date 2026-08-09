@@ -6,19 +6,19 @@ interface BlogPostContentProps {
 
 export default function BlogPostContent({ body }: BlogPostContentProps) {
   return (
-    <div className="prose prose-slate max-w-none prose-headings:font-semibold prose-p:leading-relaxed">
+    <div className="max-w-none text-slate-700 leading-relaxed">
       {body.map((block, i) => {
         const key = `block-${i}`
         if (block.type === 'p') {
           return (
-            <p key={key} className="text-slate-700 leading-relaxed">
+            <p key={key} className="mb-4 text-slate-700 leading-relaxed">
               {block.content as string}
             </p>
           )
         }
         if (block.type === 'h2') {
           return (
-            <h2 key={key} className="text-xl font-semibold text-slate-900 mt-8 mb-3">
+            <h2 key={key} className="text-2xl font-semibold text-slate-900 mt-8 mb-3">
               {block.content as string}
             </h2>
           )
@@ -32,7 +32,7 @@ export default function BlogPostContent({ body }: BlogPostContentProps) {
         }
         if (block.type === 'ul') {
           return (
-            <ul key={key} className="list-disc list-inside text-slate-700 space-y-1 my-4">
+            <ul key={key} className="list-disc list-outside pl-5 text-slate-700 space-y-1 my-4">
               {(block.content as string[]).map((item, j) => (
                 <li key={j}>{item}</li>
               ))}
@@ -41,7 +41,7 @@ export default function BlogPostContent({ body }: BlogPostContentProps) {
         }
         if (block.type === 'ol') {
           return (
-            <ol key={key} className="list-decimal list-inside text-slate-700 space-y-1 my-4">
+            <ol key={key} className="list-decimal list-outside pl-5 text-slate-700 space-y-1 my-4">
               {(block.content as string[]).map((item, j) => (
                 <li key={j}>{item}</li>
               ))}

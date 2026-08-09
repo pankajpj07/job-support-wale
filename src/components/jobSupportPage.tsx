@@ -16,7 +16,7 @@ const JobSupportPage: React.FC = () => {
       metaTitle={`India Job Support - ${homePageMetaTitle}`}
       pageHref="job-support"
     >
-      {data && <JobSupportSection imagePath={'/frontend.png'} {...data} />}
+      {data && <JobSupportSection {...data} />}
     </Layout>
   )
 }

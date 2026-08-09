@@ -3,6 +3,7 @@ import writeToSheet from '@/lib/googleSheetsAPI'
 import { FormData, ModalProps } from '@/types/types'
 import { useState, useRef, useEffect, useCallback, ChangeEvent, FormEvent } from 'react'
 import { useRouter } from 'next/router'
+import { X } from 'lucide-react'
 
 const COUNTRIES = ['USA', 'UK', 'Canada', 'Australia', 'UAE', 'India', 'Other']
 const URGENCY_OPTIONS = ['Immediately', 'Within 1 week', 'Within 1 month', 'Just exploring']
@@ -70,7 +71,7 @@ const BookDemoModal = ({ isOpen, toggleModal }: ModalProps) => {
   if (!isOpen) return null
 
   const inputClass =
-    'w-full px-4 py-2.5 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 min-h-[44px] text-slate-900'
+    'w-full px-4 py-2.5 border border-slate-300 rounded-lg bg-white transition-shadow focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-primary-500 min-h-[44px] text-slate-900'
 
   return (
     <div
@@ -81,13 +82,13 @@ const BookDemoModal = ({ isOpen, toggleModal }: ModalProps) => {
       aria-describedby="book-demo-desc"
     >
       <div
-        className="absolute inset-0 bg-slate-900/70"
+        className="absolute inset-0 bg-ink-900/70 backdrop-blur-sm"
         aria-hidden="true"
         onClick={handleClose}
       />
       <div
         ref={dialogRef}
-        className="relative z-10 w-full max-w-lg max-h-[90vh] flex flex-col bg-white rounded-xl shadow-2xl"
+        className="relative z-10 w-full max-w-lg max-h-[90vh] flex flex-col bg-white rounded-2xl shadow-2xl ring-1 ring-black/5"
       >
         <div className="flex shrink-0 justify-between items-center gap-4 p-4 md:p-6 border-b border-slate-200">
           <h2 id="book-demo-title" className="text-xl font-bold text-slate-900">
@@ -97,12 +98,10 @@ const BookDemoModal = ({ isOpen, toggleModal }: ModalProps) => {
             ref={closeButtonRef}
             type="button"
             onClick={handleClose}
-            className="shrink-0 p-2 text-slate-500 hover:text-slate-700 hover:bg-slate-100 rounded-lg transition-colors focus:outline-none focus:ring-2 focus:ring-indigo-500"
+            className="shrink-0 p-2 text-slate-500 hover:text-slate-700 hover:bg-slate-100 rounded-lg transition-colors focus:outline-none focus:ring-2 focus:ring-primary-500"
             aria-label="Close dialog"
           >
-            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden>
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-            </svg>
+            <X className="w-5 h-5" />
           </button>
         </div>
 
@@ -259,7 +258,7 @@ const BookDemoModal = ({ isOpen, toggleModal }: ModalProps) => {
                       value={opt}
                       checked={formData.urgency === opt}
                       onChange={handleInputChange}
-                      className="w-4 h-4 text-indigo-600 focus:ring-indigo-500"
+                      className="w-4 h-4 text-primary-600 focus:ring-primary-500"
                       required
                     />
                     <span className="text-slate-700">{opt}</span>
@@ -287,7 +286,7 @@ const BookDemoModal = ({ isOpen, toggleModal }: ModalProps) => {
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className="flex-1 py-3 bg-indigo-600 text-white font-semibold rounded-lg hover:bg-indigo-700 disabled:opacity-60 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 transition-colors"
+                className="flex-1 glow-cta disabled:opacity-60"
               >
                 {isSubmitting ? 'Sending…' : 'Submit'}
               </button>

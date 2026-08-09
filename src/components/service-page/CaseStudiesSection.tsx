@@ -1,5 +1,6 @@
 import React from 'react'
 import Link from 'next/link'
+import { ArrowRight } from 'lucide-react'
 import type { ServiceCaseStudy } from '@/types/servicePageTypes'
 
 interface CaseStudiesSectionProps {
@@ -20,7 +21,7 @@ export default function CaseStudiesSection({ caseStudies }: CaseStudiesSectionPr
           {caseStudies.map((cs, i) => (
             <article
               key={i}
-              className="bg-white rounded-xl p-6 shadow-sm border border-slate-100 flex flex-col"
+              className="glass-card-light p-6 flex flex-col transition-all duration-300 hover:-translate-y-1 hover:shadow-glow-sm"
             >
               <h3 className="text-lg font-bold text-slate-900 mb-2">
                 {cs.title}
@@ -46,9 +47,10 @@ export default function CaseStudiesSection({ caseStudies }: CaseStudiesSectionPr
         <p className="text-center mt-10">
           <Link
             href="/case-studies"
-            className="text-primary-600 font-medium hover:underline"
+            className="inline-flex items-center gap-1.5 text-primary-600 font-medium hover:underline"
           >
-            Read more case studies →
+            Read more case studies
+            <ArrowRight className="h-4 w-4" aria-hidden />
           </Link>
         </p>
       </div>
