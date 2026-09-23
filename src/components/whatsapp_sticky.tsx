@@ -1,7 +1,7 @@
 import { WhatsAppIcon } from '@/constants/constants'
 import Image from 'next/image'
 
-const WHATSAPP_URL = 'https://wa.link/ddu8hq'
+const WHATSAPP_URL = 'https://wa.link/xleobi'
 
 export default function WhatsAppSticky() {
   return (

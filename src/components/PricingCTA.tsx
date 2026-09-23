@@ -20,7 +20,7 @@ export default function PricingCTA() {
               Get a quote
             </Link>
             <Link
-              href="https://wa.link/ddu8hq"
+              href="https://wa.link/xleobi"
               target="_blank"
               rel="noopener noreferrer"
               className="glow-cta-outline w-full sm:w-auto min-h-[52px] !px-8 !py-4"

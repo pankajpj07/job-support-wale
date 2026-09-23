@@ -23,7 +23,7 @@ export default function ServicePageContent({ data }: ServicePageContentProps) {
             {data.heroSubhead}
           </p>
           <Link
-            href="https://wa.link/ddu8hq"
+            href="https://wa.link/xleobi"
             target="_blank"
             rel="noopener noreferrer"
             className="glow-cta !px-8 !py-4"
@@ -122,7 +122,7 @@ export default function ServicePageContent({ data }: ServicePageContentProps) {
               Request support
             </Link>
             <a
-              href="https://wa.link/ddu8hq"
+              href="https://wa.link/xleobi"
               target="_blank"
               rel="noopener noreferrer"
               className="glow-cta-outline inline-flex items-center justify-center gap-2 !px-8 !py-4"

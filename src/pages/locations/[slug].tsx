@@ -55,7 +55,7 @@ export default function LocationPage({ data, slug }: Props) {
               {data.heroSubhead}
             </p>
             <Link
-              href="https://wa.link/ddu8hq"
+              href="https://wa.link/xleobi"
               target="_blank"
               rel="noopener noreferrer"
               className="glow-cta !px-8 !py-4"

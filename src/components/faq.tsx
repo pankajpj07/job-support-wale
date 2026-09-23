@@ -17,7 +17,7 @@ const FAQ: React.FC = () => {
         </h2>
         <p className="text-slate-600 text-center mb-10">
           Still have questions?{' '}
-          <a href="https://wa.link/ddu8hq" target="_blank" rel="noopener noreferrer" className="text-primary-600 font-medium hover:underline">
+          <a href="https://wa.link/xleobi" target="_blank" rel="noopener noreferrer" className="text-primary-600 font-medium hover:underline">
             Contact us
           </a>
         </p>

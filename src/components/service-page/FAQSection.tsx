@@ -18,7 +18,7 @@ export default function FAQSection({ faq }: FAQSectionProps) {
         <p className="text-slate-600 text-center mb-10">
           Still have questions?{' '}
           <a
-            href="https://wa.link/ddu8hq"
+            href="https://wa.link/xleobi"
             target="_blank"
             rel="noopener noreferrer"
             className="text-primary-600 font-medium hover:underline"

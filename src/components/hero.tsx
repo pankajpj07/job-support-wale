@@ -37,7 +37,7 @@ const HeroBanner = () => {
         </p>
         <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-stretch sm:items-center mb-8 md:mb-10">
           <Link
-            href="https://wa.link/ddu8hq"
+            href="https://wa.link/xleobi"
             target="_blank"
             rel="noopener noreferrer"
             className="glow-cta w-full sm:w-auto sm:min-w-[200px] min-h-[52px] !px-8 !py-4"

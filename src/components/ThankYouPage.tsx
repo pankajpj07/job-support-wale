@@ -29,7 +29,7 @@ const ThankYouPage: React.FC = () => {
           ))}
         </ul>
         <a
-          href="https://wa.link/ddu8hq"
+          href="https://wa.link/xleobi"
           target="_blank"
           rel="noopener noreferrer"
           className="inline-block text-green-600 font-medium hover:underline mb-6"
